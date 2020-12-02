@@ -1,0 +1,7 @@
+// .uk-card-body
+@mixin hook-card-body {
+
+    p {
+        line-height: 1.5;
+    }
+}

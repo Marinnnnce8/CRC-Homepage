@@ -1,0 +1,24 @@
+{{#> main}}
+	{{#*inline "main"}}
+
+	{{#> ukSection heading="Internal Pages" size="large"}}
+		{{#*inline "out"}}
+
+		{{> nbJson id="children" data=items.children}}
+
+		{{/inline}}
+	{{/ukSection}}
+
+	{{#> ukSection heading="Latest News" size="large"}}
+		{{#*inline "out"}}
+
+		{{> nbJson id="posts" data=items.posts}}
+		<h1>H1</h1>
+		<h2>H2</h2>
+		<h3>H3</h3>
+		<p class="uk-text-lead">text lead</p>
+		{{/inline}}
+	{{/ukSection}}
+
+	{{/inline}}
+{{/main}}

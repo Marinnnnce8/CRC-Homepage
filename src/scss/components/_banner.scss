@@ -1,0 +1,29 @@
+.banner {
+
+	.uk-overlay {
+		padding: $global-margin 0;
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	@media (min-width: $breakpoint-small) {
+
+		&::before {
+			height: 75%;
+		}
+
+		.uk-overlay {
+			padding-bottom: $global-medium-margin;
+		}
+	}
+
+	@media (min-width: $breakpoint-large) {
+
+
+		.uk-overlay {
+			padding-bottom: $global-large-margin;
+		}
+	}
+}

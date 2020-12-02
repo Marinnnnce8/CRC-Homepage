@@ -1,0 +1,61 @@
+//
+// Main
+//
+// ========================================================================
+
+//
+// Typography
+//
+
+// Family
+$font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+// Size
+$font-size: 24px;
+
+// Weight
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+// Line Height
+$line-height: 1.6;
+
+
+//
+// Colours
+//
+$white: #fff;
+$black: #241d1e;
+$primary: #00235d;
+$secondary: #e5e5e5;
+$success: #32d296;
+$warning: #f57b20;
+$danger: #f0506e;
+$grey: lighten($black, 32%);
+$light-grey: lighten($grey, 32%);
+$off-white: lighten($light-grey, 20%);
+
+
+//
+// Other
+//
+
+// Animation
+$speed: 256ms;
+$speed-fast: $speed / 2;
+$speed-slow: $speed * 2;
+$timing: ease-in-out;
+$transition: $speed $timing;
+
+
+//
+// UIkit Global Variables
+// https://github.com/uikit/uikit/blob/develop/src/scss/components/variables.scss
+//
+// Imports UIkit variable overrides for the theme
+// These may be used by main.scss
+//
+// ========================================================================
+
+@import 'uikit/variables';
