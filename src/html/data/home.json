@@ -1,6 +1,86 @@
 {
-	"h1": "Welcome to this website",
+	"h1": "Coaching, accountancy & team development",
 	"banner": {
-		"size": "large"
+		"size": "small",
+		"src": ".\/img\/banner-home.jpg",
+		"width": "780",
+		"height": "758",
+		"alt": "image"
+	},
+	"testimonials": [{
+			"getSummary": "“I’ve always had a keen interest in Beauty Therapy . . . in fact I started painting nails before I could properly speak!”",
+			"src": ".\/img\/home-testimonial-1.png",
+			"width": "309",
+			"height": "309",
+			"alt": "image"
+		},
+		{
+			"getSummary": "“I felt inspired to start my own business and I have never looked back.”",
+			"src": ".\/img\/home-testimonial-2.png",
+			"width": "309",
+			"height": "309",
+			"alt": "image"
+		},
+		{
+			"getSummary": "“I felt inspired to start my own business and I have never looked back.”",
+			"src": ".\/img\/home-testimonial-3.png",
+			"width": "309",
+			"height": "309",
+			"alt": "image"
+		},
+		{
+			"getSummary": "“I felt inspired to start my own business and I have never looked back.”",
+			"src": ".\/img\/home-testimonial-4.png",
+			"width": "309",
+			"height": "309",
+			"alt": "image"
+		}
+	],
+	"values": [
+		{
+			"src": ".\/img\/loom-logo.png"
+		},
+		{
+			"src": ".\/img\/GoCardless-logo.png"
+		},
+		{
+			"src": ".\/img\/Spotlight-Reporting-logo.png"
+		},
+		{
+			"src": ".\/img\/ReceiptBank-logo.png"
+		},
+		{
+			"src": ".\/img\/zoom-logo.png"
+		},
+		{
+			"src": ".\/img\/xero-logo.png"
+		},
+		{
+			"src": ".\/img\/Quickbooks-logo.png"
+		}
+	],
+	"context": {
+		"secondary": true,
+		"title": "Here’s how we tackle it…",
+		"numberOne": "0",
+		"numberTwo": "1",
+		"subTitle": "Time for change",
+		"paragraph": [
+			{
+				"text": "You know you want more. You have a vision for your business. You just don’t seem to have the time to achieve it."
+			},
+			{
+				"text": "When you’re too busy, it’s difficult to get the headspace required to put your plans into action."
+			},
+			{
+				"text": "That’s why we start by giving you back your time."
+			},
+			{
+				"text": "We hunt out the quick wins, make sure your systems and processes are running as efficiently as possible, and give you back those all-important minutes & hours."
+			},
+			{
+				"text": "This gives you the time to start your journey to bigger and better things!"
+			}
+		]
 	}
 }

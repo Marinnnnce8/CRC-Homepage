@@ -1,0 +1,88 @@
+{{#with page.context}}
+<div class="details {{#if secondary}} uk-background-secondary{{/if}}">
+	{{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+		{{#*inline "out"}}
+
+            <div class="context">
+
+                {{#> ukContainer size=(default page.ukContainer ukContainer)}}
+                    {{#*inline "out"}}
+
+                    {{#if title}}<h2>{{title}}</h2>{{/if}}
+
+                    {{#if reverse}}
+
+                        {{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2 uk-flex-row-reverse"}}
+                            {{#*inline "cells"}}
+
+                                <div>
+
+                                    {{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2"}}
+                                        {{#*inline "cells"}}
+                                            <div>
+                                                <span class="number">{{numberOne}}</span>
+                                            </div>
+                                            <div>
+                                                <span class="number">{{numberTwo}}</span>
+                                            </div>
+                                        {{/inline}}
+                                    {{/ukGrid}}      
+
+                                </div>
+                                <div>
+                                    <h2 class="uk-text-uppercase">{{subTitle}}</h2>
+
+                                    {{#each paragraph}}
+                                        {{#with this}}
+
+                                            <p>{{text}}</p>
+                                        {{/with}}
+                                    {{/each}}    
+
+                                </div>
+                            {{/inline}}
+                        {{/ukGrid}}
+
+                    {{else}}
+
+                        {{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
+                            {{#*inline "cells"}}
+
+                                <div>
+
+                                    {{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2"}}
+                                        {{#*inline "cells"}}
+                                            <div>
+                                                <span class="number">{{numberOne}}</span>
+                                            </div>
+                                            <div>
+                                                <span class="number">{{numberTwo}}</span>
+                                            </div>
+                                        {{/inline}}
+                                    {{/ukGrid}}      
+
+                                </div>
+                                <div>
+                                    <h2 class="uk-text-uppercase">{{subTitle}}</h2>
+
+                                    {{#each paragraph}}
+                                        {{#with this}}
+
+                                            <p>{{text}}</p>
+                                        {{/with}}
+                                    {{/each}}    
+
+                                </div>
+                            {{/inline}}
+                        {{/ukGrid}}
+                    {{/if}}
+                        
+
+                    {{/inline}}
+                {{/ukContainer}}
+            </div>
+
+		{{/inline}}
+	{{/ukContainer}}
+</div>
+{{/with}}

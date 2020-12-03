@@ -1,0 +1,17 @@
+<div class="uk-card">
+
+    <div class="uk-width-1-1">
+        <div class="uk-card-media-top uk-position-relative">
+            {{> renderIcon name="rings-thin" class="uk-position-center"}}
+            <img src="{{src}}" alt="{{default alt ""}}" width="{{width}}" height="{{height}}" loading="lazy">
+        </div>
+
+        <div class="uk-card-body">
+            {{#if getSummary}}
+            <p>
+                {{getSummary}}
+            </p>
+            {{/if}}
+        </div>
+    </div>
+</div>

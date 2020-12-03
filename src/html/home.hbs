@@ -1,10 +1,61 @@
 {{#> main}}
 	{{#*inline "main"}}
 
-	{{#> ukSection heading="Internal Pages" size="large"}}
+	<div>
+		{{#> ukContainer size=ukContainer}}
+			{{#*inline "out"}}
+			<h1>that helps you build a better business.</h1>
+			{{/inline}}
+		{{/ukContainer}}
+	</div>
+	
+	<div>
+		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
+			{{#*inline "cells"}}
+				<div>
+					<img src="../img/home-1.jpg" loading="lazy" width="573" height="846" alt="image">
+				</div>
+				<div>
+					<p class="uk-text-lead">If you could have more time, more efficient business processes and a happier team, would you take it?</p>
+				</div>
+			{{/inline}}
+		{{/ukGrid}}
+	</div>
+
+	<div>
+		{{#> ukContainer size=ukContainer}}
+			{{#*inline "out"}}
+				{{#> ukGrid class="uk-grid-medium uk-flex uk-child-width-1-2"}}
+					{{#*inline "cells"}}
+						<div>
+							<p class="uk-text-lead">At CRC, that’s exactly what we do. We work with ambitious and creative business owners just like you to help take things to the next level.</p>
+						</div>
+						<div>
+							{{#> ukGrid class="uk-grid-medium uk-flex uk-child-width-1-2"}}
+								{{#*inline "cells"}}
+									<div>
+										<img src="../img/home-2.jpg" loading="lazy" width="375" height="618" alt="image">
+									</div>
+									<div>
+										<img src="../img/home-3.jpg" loading="lazy" width="376" height="618" alt="image">
+									</div>
+								{{/inline}}
+							{{/ukGrid}}
+						</div>
+					{{/inline}}
+				{{/ukGrid}}
+			{{/inline}}
+		{{/ukContainer}}
+	</div>
+
+	<div class="uk-margin-medium-top">
+		<img src="../img/home-4.jpg" loading="lazy" width="820" height="474" alt="image">
+	</div>
+
+	{{#> ukSection size="small"}}
 		{{#*inline "out"}}
 
-		{{> nbJson id="children" data=items.children}}
+		<h1>that helps you build a better business.</h1>
 
 		{{/inline}}
 	{{/ukSection}}
@@ -12,13 +63,54 @@
 	{{#> ukSection heading="Latest News" size="large"}}
 		{{#*inline "out"}}
 
-		{{> nbJson id="posts" data=items.posts}}
 		<h1>H1</h1>
 		<h2>H2</h2>
 		<h3>H3</h3>
 		<p class="uk-text-lead">text lead</p>
 		{{/inline}}
 	{{/ukSection}}
+
+	{{#> ukSection heading="Internal Pages" size="large"}}
+		{{#*inline "out"}}
+
+			{{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l"}}
+				{{#*inline "cells"}}
+
+				{{#each page.testimonials}}
+					{{#with this}}
+					<div>
+						{{> card}}
+					</div>
+					{{/with}}
+				{{/each}}
+
+				{{/inline}}
+			{{/ukGrid}}
+
+		{{/inline}}
+	{{/ukSection}}
+
+	{{#> ukSection heading="" size="large"}}
+		{{#*inline "out"}}
+
+			{{#> ukGrid class="uk-grid-small uk-flex"}}
+				{{#*inline "cells"}}
+
+				{{#each page.values}}
+					{{#with this}}
+					<div>
+						{{> value}}
+					</div>
+					{{/with}}
+				{{/each}}
+
+				{{/inline}}
+			{{/ukGrid}}
+
+		{{/inline}}
+	{{/ukSection}}
+
+	{{> context}}
 
 	{{/inline}}
 {{/main}}

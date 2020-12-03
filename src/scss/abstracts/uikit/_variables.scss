@@ -35,10 +35,10 @@ $global-link-hover-color: $primary;
 $global-inverse-color: $white;
 
 // Backgrounds
-$global-background: $white;
+$global-background: $secondary;
 $global-muted-background: $off-white;
 $global-primary-background: $primary;
-$global-secondary-background: $secondary;
+$global-secondary-background: $off-white;
 $global-success-background: $success;
 $global-warning-background: $warning;
 $global-danger-background: $danger;
@@ -98,7 +98,7 @@ $form-label-font-size: $global-small-font-size;
 //
 $container-max-width: 1200px;
 $container-xsmall-max-width: 750px;
-$container-small-max-width: 900px;
+$container-small-max-width: 1205px;
 $container-large-max-width: 1400px;
 $container-xlarge-max-width: 1600px;
 $container-padding-horizontal: 15px;
@@ -159,3 +159,9 @@ $text-lead-font-size: $global-medium-font-size;
 $text-lead-line-height: 1.5;
 $text-lead-color: $global-emphasis-color;
 $text-meta-color: $global-muted-color;
+
+//
+// Card
+//
+$card-body-padding-horizontal-l: $global-large-margin;
+$card-body-padding-vertical-l: $global-margin;

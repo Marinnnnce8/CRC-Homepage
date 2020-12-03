@@ -1,8 +1,9 @@
-<div class="banner uk-background-cover uk-position-relative">
-	<div class="uk-overlay uk-position-bottom">
+<div class="banner">
+	<div>
 		{{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer))}}
 			{{#*inline "out"}}
-			<h1>{{page.h1}}</h1>
+			<h1 class="uk-width-1-2">{{page.h1}}</h1>
+			<img class="uk-position-top-right" src="{{page.banner.src}}" alt="{{default page.banner.alt ""}}" width="{{page.banner.width}}" height="{{page.banner.height}}" loading="lazy">
 			{{#if (neq page.name "home")}}{{> ukBreadcrumb}}{{/if}}
 			{{/inline}}
 		{{/ukContainer}}

@@ -5,3 +5,10 @@
         line-height: 1.5;
     }
 }
+
+// .uk-card-media-top
+@mixin hook-card-media-top {
+    svg {
+        width: calc(100% - 10px);
+    }
+}
