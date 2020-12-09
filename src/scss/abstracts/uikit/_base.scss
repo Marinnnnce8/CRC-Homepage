@@ -1,3 +1,12 @@
-@mixin hook-base-heading {
-    color: $global-color;
+@mixin hook-base-h1 {
+    letter-spacing: -.02em;
+}
+
+@mixin hook-base-h2 {
+    letter-spacing: -.02em;
+}
+
+@mixin hook-base-h3 {
+    font-weight: $light;
+    margin-bottom: $global-large-margin + 15;
 }

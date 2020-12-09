@@ -67,13 +67,16 @@ $global-control-large-height: 55px;
 //
 // Base
 //
+$base-heading-color: $global-color;
 $base-body-font-weight: $light;
 $base-link-hover-text-decoration: underline;
 $base-strong-font-weight: $bold;
-$base-heading-font-weight: 200;
+$base-heading-font-weight: $extra-light;
 $base-h1-font-size-m: $global-xlarge-font-size;
-$base-h1-line-height: 1.1 !default;
+$base-h1-line-height: 1.1;
 $base-h2-font-size-m: $global-2xlarge-font-size;
+$base-h2-line-height: 1.1;
+$base-h3-line-height: 1.1;
 $base-code-color: inherit;
 $base-em-color: inherit;
 $base-selection-background: $secondary;
@@ -159,9 +162,17 @@ $text-lead-font-size: $global-medium-font-size;
 $text-lead-line-height: 1.5;
 $text-lead-color: $global-emphasis-color;
 $text-meta-color: $global-muted-color;
+$text-large-line-height: 1.1;
+
 
 //
 // Card
 //
-$card-body-padding-horizontal-l: $global-large-margin;
+$card-body-padding-horizontal-l: $global-large-margin - 10;
 $card-body-padding-vertical-l: $global-margin;
+
+
+//
+// Navbar
+//
+$navbar-toggle-color: $global-color;

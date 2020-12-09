@@ -21,8 +21,8 @@
 </head>
 <body data-load-components="{{loadComponents}}">
 
-	<header class="header" data-uk-sticky="media: 960; animation: uk-animation-slide-top; show-on-up: true;">
-		<nav class="uk-navbar-container uk-navbar" data-uk-navbar>
+	<header class="header uk-background-default" data-uk-sticky="media: 1900; animation: uk-animation-slide-top; show-on-up: true;">
+		<nav class="uk-navbar-container uk-navbar uk-navbar-transparent" data-uk-navbar>
 
 			<div class="uk-navbar-left">
 				<a href="./" class="uk-navbar-item uk-logo">
@@ -36,7 +36,7 @@
 					{{> renderNavigation}}
 				</div>
 				<a href="#nav" class="uk-navbar-toggle" data-uk-toggle="animation: uk-animation-slide-left;" aria-label="Toggle Navigation" hidden>
-					<span data-uk-navbar-toggle-icon></span>
+					<span role="presentation"></span>
 				</a>
 			</div>
 			{{/if}}
@@ -44,7 +44,7 @@
 		</nav>
 	</header>
 
-	<main class="uk-margin-bottom">
+	<main class="uk-margin-bottom" data-scroll-container>
 
 		{{#if page.banner}}
 			{{> banner}}
@@ -61,34 +61,29 @@
 
 	</main>
 
-	<footer class="footer uk-padding-large uk-padding-remove-horizontal">
-		{{#> ukContainer class="uk-text-center"}}
-			{{#*inline "out"}}
-
-			{{#if legal}}
-			<div class="legal uk-margin-small-bottom">
-				<ul>
-				{{#each legal}}
-					<li>
-						<a href="#">{{this}}</a>
-					</li>
-				{{/each}}
-				</ul>
-			</div>
-			{{/if}}
-
-			<div class="copyright uk-margin-small-bottom">Copyright &copy; {{year}} {{nb.clientName}}. All rights reserved.</div>
+	<footer class="footer uk-padding-large">
+		<div class="uk-flex uk-flex-between">
+			<div class="copyright">Copyright &copy; 2018 - {{year}} {{nb.clientName}}. All rights reserved.</div>
 
 			<div class="watermark">
-				Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener" href="https://www.nbcommunication.com/">NB <img src="https://brand.nbcommunication.com/logo/web/nb.png" alt="NB Communication Ltd Logo" loading="lazy"></a>
+				Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener" href="https://www.nbcommunication.com/">NB</a>
 			</div>
-			{{/inline}}
-		{{/ukContainer}}
+		</div>
 	</footer>
 
 	<script src="./js/svgxuse.min.js"></script>
 	<script src="./js/uikit-core.min.js"></script>
+	<script src="./js/locomotive-scroll.min.js"></script>
 	<script src="./js/nbkit.min.js"></script>
 	<script src="./js/main.js"></script>
+
+	<script>
+		(function () {
+        	var scroll = new LocomotiveScroll({
+				el: document.querySelector('[data-scroll-container]'),
+    			smooth: true
+			});
+    	})();
+	</script>
 </body>
 </html>

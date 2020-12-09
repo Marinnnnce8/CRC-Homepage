@@ -1,3 +1,10 @@
+// .uk-card
+@mixin hook-card {
+    @media (min-width: $breakpoint-medium) {
+        width: 413px;
+    }
+}
+
 // .uk-card-body
 @mixin hook-card-body {
 
@@ -8,6 +15,10 @@
 
 // .uk-card-media-top
 @mixin hook-card-media-top {
+    img {
+        width: 100%;
+    }
+
     svg {
         width: calc(100% - 10px);
     }

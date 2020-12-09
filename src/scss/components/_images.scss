@@ -1,0 +1,19 @@
+.images {
+
+
+    @media (min-width: $breakpoint-medium) {
+        &-right {
+            width: calc(100% - 95px);
+        }
+
+        &-left {
+            >div {
+                width: calc(50% + 20px);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

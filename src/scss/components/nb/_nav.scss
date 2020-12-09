@@ -12,7 +12,7 @@
 
 	.uk-parent {
 
-		> a {
+		>a {
 			position: relative;
 		}
 	}
@@ -32,9 +32,9 @@
 
 		.uk-navbar-nav {
 
-			> .uk-parent {
+			>.uk-parent {
 
-				> a {
+				>a {
 					@include bg-icon('%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22rgba(0,0,0,0.5)%22%20stroke-width%3D%221.03%22%20points%3D%2216%207%2010%2013%204%207%22%2F%3E%3C%2Fsvg%3E');
 					background-position: 96% 52%;
 
@@ -43,11 +43,11 @@
 					}
 				}
 
-				> .uk-navbar-dropdown {
+				>.uk-navbar-dropdown {
 
 					.uk-parent {
 
-						> a {
+						>a {
 							@include bg-icon('%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22rgba(0,0,0,0.5)%22%20stroke-width%3D%221.03%22%20points%3D%227%204%2013%2010%207%2016%22%2F%3E%3C%2Fsvg%3E');
 							background-position: 100% 50%;
 							padding-right: 10px;
@@ -72,7 +72,7 @@
 		.uk-navbar-nav {
 			display: block;
 
-			> li {
+			>li {
 				padding: $global-small-gutter $global-small-gutter 0;
 
 				&.uk-parent {
@@ -83,7 +83,7 @@
 		}
 
 		.uk-navbar-item,
-		.uk-navbar-nav > li > a,
+		.uk-navbar-nav>li>a,
 		.uk-navbar-toggle {
 			display: block;
 			min-height: 0;

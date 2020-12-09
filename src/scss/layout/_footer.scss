@@ -1,70 +1,23 @@
 .footer {
-	font-size: 0.9rem;
+	font-size: .5833334rem;
+	padding: 70px 50px 40px;
+	color: $global-color;
+	line-height: 1.5;
 
 	@media (max-width: $breakpoint-mobile) {
 		font-size: 0.8rem;
-	}
-
-	.legal {
-		padding: $global-small-margin 0;
-
-		ul {
-			margin: 0;
-			padding: 0;
-
-			li {
-				display: inline-block;
-				list-style: none;
-				margin: 0;
-				padding: 0;
-
-				a {
-					color: $grey;
-
-					@include hover {
-						color: $black;
-					}
-				}
-
-				&::after {
-					content: '|';
-					color: $light-grey;
-					display: inline-block;
-					padding: 0 $global-small-margin;
-				}
-
-				&:last-child::after {
-					content: '';
-					padding: 0;
-				}
-
-				@media (max-width: $breakpoint-mobile) {
-					display: block;
-
-					&::after {
-						display: none;
-					}
-				}
-			}
-		}
 	}
 
 	.watermark {
 
 		a {
 			align-items: center;
-			color: $black;
 			display: inline-flex;
-			font-weight: 700;
+			transition: $transition;
 
 			@include hover {
 				color: #e11e2f;
 				text-decoration: none;
-			}
-
-			img {
-				height: 1rem;
-				margin-left: 2px;
 			}
 		}
 	}

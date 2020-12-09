@@ -1,0 +1,9 @@
+.experience {
+    @media (min-width: $breakpoint-medium) {
+        padding: 440px 0 150px;
+
+        h2 {
+            margin-bottom: 83px;
+        }
+    }
+}

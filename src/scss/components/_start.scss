@@ -1,0 +1,36 @@
+$marginTop: 60;
+
+.start {
+    @media (min-width: $breakpoint-medium) {
+        &.start-last {
+            .uk-background-primary {
+                padding: 157px 0 256px 207px;
+
+                svg {
+                    bottom: 177px;
+                }
+            }
+        }
+
+        &:not(.start-last) .uk-background-primary {
+            padding: 208px 0 277px 100px;
+
+            svg {
+                bottom: 120px;
+            }
+        }
+
+        svg {
+            width: 227px;
+            height: 69px;
+            position: absolute;
+            left: 0;
+        }
+
+        @for $i from 1 through $marginTop {
+            li:nth-of-type(#{$i}):not(:last-of-type) {
+                margin-bottom: #{$marginTop + $i * 20}px;
+            }
+        }
+    }
+}

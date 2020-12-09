@@ -1,0 +1,19 @@
+.testimonials {
+    @media (min-width: $breakpoint-medium) {
+        padding: 230px 0 70px;
+
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-icon {
+        // width: 100%;
+        fill: rgba($global-color, .1);
+        position: absolute;
+        // left: 0;
+        // right: 0;
+        bottom: 450px;
+        transform: translateY(-50%);
+    }
+}

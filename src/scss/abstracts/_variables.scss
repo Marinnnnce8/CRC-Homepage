@@ -8,12 +8,14 @@
 //
 
 // Family
-$font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-default: 'Poppins', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
 
 // Size
 $font-size: 24px;
 
 // Weight
+$extra-light: 200;
 $light: 300;
 $normal: 400;
 $bold: 700;

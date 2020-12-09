@@ -59,28 +59,78 @@
 			"src": ".\/img\/Quickbooks-logo.png"
 		}
 	],
-	"context": {
-		"secondary": true,
-		"title": "Here’s how we tackle it…",
-		"numberOne": "0",
-		"numberTwo": "1",
-		"subTitle": "Time for change",
-		"paragraph": [
-			{
-				"text": "You know you want more. You have a vision for your business. You just don’t seem to have the time to achieve it."
-			},
-			{
-				"text": "When you’re too busy, it’s difficult to get the headspace required to put your plans into action."
-			},
-			{
-				"text": "That’s why we start by giving you back your time."
-			},
-			{
-				"text": "We hunt out the quick wins, make sure your systems and processes are running as efficiently as possible, and give you back those all-important minutes & hours."
-			},
-			{
-				"text": "This gives you the time to start your journey to bigger and better things!"
+	"contexts": [
+		{
+			"context": {
+				"secondary": true,
+				"title": "Here’s<br> how we tackle it…",
+				"numberOne": "0",
+				"numberTwo": "1",
+				"subTitle": "Time for change",
+				"paragraph": [
+					{
+						"text": "You know you want more. You have a vision for your business. You just don’t seem to have the time to achieve it."
+					},
+					{
+						"text": "When you’re too busy, it’s difficult to get the headspace required to put your plans into action."
+					},
+					{
+						"text": "That’s why we start by giving you back your time."
+					},
+					{
+						"text": "We hunt out the quick wins, make sure your systems and processes are running as efficiently as possible, and give you back those all-important minutes & hours."
+					},
+					{
+						"text": "This gives you the time to start your journey to bigger and better things!"
+					}
+				]
 			}
-		]
-	}
+		},
+		{
+			"context": {
+				"reverse": true,
+				"numberOne": "0",
+				"numberTwo": "2",
+				"subTitle": "Financial liberation",
+				"paragraph": [
+					{
+						"text": "You can have all the time in the world, but if you don’t have the money to invest in your business, it won’t be going anywhere fast."
+					},
+					{
+						"text": "With CRC as your external business partner, we’ll identify the key drivers behind the finances of your business."
+					},
+					{
+						"text": "You’ll have a clear and manageable plan that nails down the main actions and targets to ensure your business gets on track, and stays there."
+					},
+					{
+						"text": "Step by step, you’ll start generating the cash needed to move your business forward, and giving you the financial freedom you desire!"
+					},
+					{
+						"text": "Once the money’s in place, then it’s time to invest!"
+					}
+				]
+			}
+		},
+		{
+			"context": {
+				"numberOne": "0",
+				"numberTwo": "3",
+				"subTitle": "Dream Team",
+				"paragraph": [
+					{
+						"text": "We believe that your people are the most important part of your business."
+					},
+					{
+						"text": "Once you’re equipped with extra time and extra cash, we’re going to help you uncover your team’s potential."
+					},
+					{
+						"text": "It’s only by creating fulfilment in the day-to-day work that you can have a team of people who love their work, and help create something far better than you could ever have imagined alone!"
+					},
+					{
+						"text": "Investing in the individuals around you, you’ll grow a strong team of highly involved, highly engaged people ready to build a business your competitors will be envious of."
+					}
+				]
+			}
+		}
+	]
 }

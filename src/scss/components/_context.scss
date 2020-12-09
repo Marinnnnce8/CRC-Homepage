@@ -2,5 +2,47 @@
     .number {
         font-size: 450px;
         line-height: 100px;
+        font-family: $font-secondary;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        h2 {
+            margin-top: 172px;
+        }
+
+        &-wrap {
+            padding-bottom: 80px;
+
+            .uk-grid-large {
+                margin-top: 200px;
+            }
+        }
+
+        // .uk-grid-small {
+        //     div:last-of-type {
+        //         margin-top: 150px;
+        //     }
+        // }
+
+        // .uk-grid-large {
+        //     div:last-of-type h3 {
+        //         margin-top: 350px;
+        //     }
+        // }
+
+        p {
+            padding-left: 40px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: -15px;
+                height: 2px;
+                width: 40px;
+                background-color: rgba($global-color, .1);
+            }
+        }
     }
 }

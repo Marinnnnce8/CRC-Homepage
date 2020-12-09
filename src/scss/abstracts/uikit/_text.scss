@@ -1,3 +1,9 @@
+//.uk-text-lead
 @mixin hook-text-lead {
 	font-weight: $base-body-font-weight;
+}
+
+//.uk-text-large
+@mixin hook-text-large {
+	font-size: $global-xlarge-font-size;
 }

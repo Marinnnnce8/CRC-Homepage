@@ -2,6 +2,15 @@
 
 	img {
 		top: 466px;
+		width: calc(50vw - 20px);
+	}
+
+	&-bottom {
+		padding: 420px 0 218px;
+
+		h1 {
+			min-width: 200vw;
+		}
 	}
 
 	@media (min-width: $breakpoint-small) {

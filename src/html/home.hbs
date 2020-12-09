@@ -1,98 +1,119 @@
 {{#> main}}
 	{{#*inline "main"}}
-
-	<div>
-		{{#> ukContainer size=ukContainer}}
-			{{#*inline "out"}}
-			<h1>that helps you build a better business.</h1>
-			{{/inline}}
-		{{/ukContainer}}
-	</div>
 	
 	<div>
 		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
 			{{#*inline "cells"}}
-				<div>
+				<div data-scroll data-scroll-speed="3">
 					<img src="../img/home-1.jpg" loading="lazy" width="573" height="846" alt="image">
 				</div>
 				<div>
-					<p class="uk-text-lead">If you could have more time, more efficient business processes and a happier team, would you take it?</p>
+					<p data-scroll data-scroll-speed="15" data-scroll-offset="15%, 85%" class="uk-text-lead uk-width-3-5">If you could have more time, more efficient business processes and a happier team, would you take it?</p>
 				</div>
 			{{/inline}}
 		{{/ukGrid}}
 	</div>
-
 	<div>
-		{{#> ukContainer size=ukContainer}}
-			{{#*inline "out"}}
-				{{#> ukGrid class="uk-grid-medium uk-flex uk-child-width-1-2"}}
+		<div data-scroll data-scroll-speed="3">
+			{{#> ukContainer size=ukContainer}}
+				{{#*inline "out"}}
+					{{#> ukGrid class="uk-grid uk-flex uk-child-width-1-2"}}
+						{{#*inline "cells"}}
+							<div>
+								<p class="uk-text-lead uk-width-5-6">At CRC, that’s exactly what we do. We work with ambitious and creative business owners just like you to help take things to the next level.</p>
+							</div>
+						{{/inline}}
+					{{/ukGrid}}
+				{{/inline}}
+			{{/ukContainer}}
+		</div>
+
+		<div class="uk-flex uk-flex-right images-right">
+			<div class="uk-width-1-2">
+				{{#> ukGrid class="uk-grid uk-flex uk-child-width-1-2"}}
 					{{#*inline "cells"}}
-						<div>
-							<p class="uk-text-lead">At CRC, that’s exactly what we do. We work with ambitious and creative business owners just like you to help take things to the next level.</p>
+						<div data-scroll data-scroll-speed="7" data-scroll-offset="15%, 85%">
+							<img src="../img/home-2.jpg" loading="lazy" width="375" height="618" alt="image">
 						</div>
-						<div>
-							{{#> ukGrid class="uk-grid-medium uk-flex uk-child-width-1-2"}}
-								{{#*inline "cells"}}
-									<div>
-										<img src="../img/home-2.jpg" loading="lazy" width="375" height="618" alt="image">
-									</div>
-									<div>
-										<img src="../img/home-3.jpg" loading="lazy" width="376" height="618" alt="image">
-									</div>
-								{{/inline}}
-							{{/ukGrid}}
+						<div data-scroll data-scroll-speed="20">
+							<img src="../img/home-3.jpg" loading="lazy" width="376" height="618" alt="image">
 						</div>
 					{{/inline}}
 				{{/ukGrid}}
+			</div>
+		</div>
+	</div>
+
+	<div class="uk-flex images-left">
+		<div>
+			<img src="../img/home-4.jpg" loading="lazy" width="376" height="618" alt="image">
+		</div>
+	</div>
+
+	{{#each page.contexts}}
+		{{#with this}}
+			<div>
+				{{> context}}
+			</div>
+		{{/with}}
+	{{/each}}
+
+	<div class="uk-flex uk-flex-between uk-light start">
+		<div class="uk-flex uk-flex-column uk-flex-right">
+			<img src="../img/home-5.jpg" loading="lazy" width="717" height="980" alt="image">
+		</div>
+		<div class="uk-background-primary uk-position-relative uk-width-expand uk-flex uk-flex-column uk-flex-right">
+			<ul class="uk-list">
+				<li><h2>Are you</h2></li>
+				<li><h2>ready to</h2></li>
+				<li><h2>get</h2></li>
+				<li><h2>started?</h2></li>
+			</ul>
+			{{>renderIcon name="arrow-right" viewBox="228 69"}}
+		</div>
+	</div>
+
+
+	<div class="uk-position-relative testimonials uk-background-secondary">
+		{{> renderIcon name="testimonials" class="testimonials-icon" viewBox="1601 166"}}
+		{{#> ukContainer size=ukContainer}}
+			{{#*inline "out"}}
+				<h2>See who<br> we’ve helped</h2>
+				{{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l"}}
+					{{#*inline "cells"}}
+
+					{{#each page.testimonials}}
+						{{#with this}}
+						<div>
+							{{> card}}
+						</div>
+						{{/with}}
+					{{/each}}
+
+					{{/inline}}
+				{{/ukGrid}}
+
 			{{/inline}}
 		{{/ukContainer}}
 	</div>
 
-	<div class="uk-margin-medium-top">
-		<img src="../img/home-4.jpg" loading="lazy" width="820" height="474" alt="image">
-	</div>
-
-	{{#> ukSection size="small"}}
-		{{#*inline "out"}}
-
-		<h1>that helps you build a better business.</h1>
-
-		{{/inline}}
-	{{/ukSection}}
-
-	{{#> ukSection heading="Latest News" size="large"}}
-		{{#*inline "out"}}
-
-		<h1>H1</h1>
-		<h2>H2</h2>
-		<h3>H3</h3>
-		<p class="uk-text-lead">text lead</p>
-		{{/inline}}
-	{{/ukSection}}
-
-	{{#> ukSection heading="Internal Pages" size="large"}}
-		{{#*inline "out"}}
-
-			{{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l"}}
-				{{#*inline "cells"}}
-
-				{{#each page.testimonials}}
-					{{#with this}}
-					<div>
-						{{> card}}
+	<div class="experience">
+		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
+			{{#*inline "cells"}}
+				<div>
+					<img src="../img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
+				</div>
+				<div>
+					<div class="uk-width-4-5">
+						<h2 class="uk-text-large">Your experience working with CRC</h2>
+						<p>Our focus is on building a relationship with you and your business.</p>
+						<p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
+						<p>We’re constantly evolving the platforms we use to ensure we give you the best experience.</p>
 					</div>
-					{{/with}}
-				{{/each}}
-
-				{{/inline}}
-			{{/ukGrid}}
-
-		{{/inline}}
-	{{/ukSection}}
-
-	{{#> ukSection heading="" size="large"}}
-		{{#*inline "out"}}
-
+				</div>
+			{{/inline}}
+		{{/ukGrid}}
+		<div class="values">
 			{{#> ukGrid class="uk-grid-small uk-flex"}}
 				{{#*inline "cells"}}
 
@@ -106,11 +127,22 @@
 
 				{{/inline}}
 			{{/ukGrid}}
+		</div>
+	</div>
 
-		{{/inline}}
-	{{/ukSection}}
+	<div class="uk-flex uk-flex-between uk-light start start-last uk-position-relative">
+		<div class="uk-flex uk-flex-column uk-flex-left">
+			<img src="../img/home-7.jpg" loading="lazy" width="717" height="980" alt="image">
+		</div>
+		<div class="uk-background-primary uk-position-relative uk-width-expand uk-flex uk-flex-column uk-flex-right">
+			<ul class="uk-list">
+				<li><h2>get</h2></li>
+				<li><h2>started?</h2></li>
+			</ul>
+			{{>renderIcon name="arrow-right" viewBox="228 69"}}
+		</div>
+	</div>
 
-	{{> context}}
 
 	{{/inline}}
 {{/main}}
