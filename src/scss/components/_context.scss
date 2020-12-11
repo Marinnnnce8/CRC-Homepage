@@ -6,29 +6,38 @@
     }
 
     @media (min-width: $breakpoint-medium) {
+        padding-bottom: 80px;
+
         h2 {
             margin-top: 172px;
         }
 
-        &-wrap {
-            padding-bottom: 80px;
-
-            .uk-grid-large {
-                margin-top: 200px;
-            }
+        .number {
+            float: left;
+            width: 25%;
         }
 
-        // .uk-grid-small {
-        //     div:last-of-type {
-        //         margin-top: 150px;
-        //     }
-        // }
+        .uk-width-1-2 {
+            width: 49.6%;
+            display: inline-block;
+        }
 
-        // .uk-grid-large {
-        //     div:last-of-type h3 {
-        //         margin-top: 350px;
-        //     }
-        // }
+        &-wrap {
+            padding-top: 15vh;
+        }
+
+        &-text {
+            float: right;
+            padding-top: 25vh;
+        }
+
+        &-target {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 88vh;
+        }
 
         p {
             padding-left: 40px;

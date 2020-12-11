@@ -13,52 +13,44 @@
 			{{/inline}}
 		{{/ukGrid}}
 	</div>
-	<div>
-		<div data-scroll data-scroll-speed="3">
-			{{#> ukContainer size=ukContainer}}
-				{{#*inline "out"}}
+
+	<div class="uk-position-relative images">
+		{{#> ukContainer size=ukContainer}}
+			{{#*inline "out"}}
+				<span class="fixed-target images-target"></span>
+				<div class="uk-width-1-2 images-text" data-scroll data-scroll-speed="1" data-scroll-sticky data-scroll-target=".images-target">
+					<div data-scroll data-scroll-offset="100" data-scroll-speed="1">
+						<p class="uk-text-lead uk-width-5-6">At CRC, that’s exactly what we do. We work with ambitious and creative business owners just like you to help take things to the next level.</p>
+					</div>
+				</div>
+				<div class="uk-flex uk-flex-right images-right" data-scroll data-scroll-speed="4">
 					{{#> ukGrid class="uk-grid uk-flex uk-child-width-1-2"}}
 						{{#*inline "cells"}}
-							<div>
-								<p class="uk-text-lead uk-width-5-6">At CRC, that’s exactly what we do. We work with ambitious and creative business owners just like you to help take things to the next level.</p>
+							<div data-scroll data-scroll-speed="10">
+								<img src="../img/home-2.jpg" loading="lazy" width="375" height="618" alt="image">
+							</div>
+							<div data-scroll data-scroll-speed="2">
+								<img src="../img/home-3.jpg" loading="lazy" width="376" height="618" alt="image">
 							</div>
 						{{/inline}}
 					{{/ukGrid}}
-				{{/inline}}
-			{{/ukContainer}}
-		</div>
-
-		<div class="uk-flex uk-flex-right images-right">
-			<div class="uk-width-1-2">
-				{{#> ukGrid class="uk-grid uk-flex uk-child-width-1-2"}}
-					{{#*inline "cells"}}
-						<div data-scroll data-scroll-speed="7" data-scroll-offset="15%, 85%">
-							<img src="../img/home-2.jpg" loading="lazy" width="375" height="618" alt="image">
-						</div>
-						<div data-scroll data-scroll-speed="20">
-							<img src="../img/home-3.jpg" loading="lazy" width="376" height="618" alt="image">
-						</div>
-					{{/inline}}
-				{{/ukGrid}}
-			</div>
-		</div>
-	</div>
-
-	<div class="uk-flex images-left">
-		<div>
+				</div>
+			{{/inline}}
+		{{/ukContainer}}
+		<div class="uk-flex images-left images-target" data-scroll data-scroll-speed="2">
 			<img src="../img/home-4.jpg" loading="lazy" width="376" height="618" alt="image">
 		</div>
 	</div>
 
-	{{#each page.contexts}}
-		{{#with this}}
-			<div>
+	<div>
+		{{#each page.contexts}}
+			{{#with this}}
 				{{> context}}
-			</div>
-		{{/with}}
-	{{/each}}
+			{{/with}}
+		{{/each}}
+	</div>
 
-	<div class="uk-flex uk-flex-between uk-light start">
+	{{!-- <div class="uk-flex uk-flex-between uk-light start" data-scroll data-scroll-section>
 		<div class="uk-flex uk-flex-column uk-flex-right">
 			<img src="../img/home-5.jpg" loading="lazy" width="717" height="980" alt="image">
 		</div>
@@ -71,10 +63,10 @@
 			</ul>
 			{{>renderIcon name="arrow-right" viewBox="228 69"}}
 		</div>
-	</div>
+	</div> --}}
 
 
-	<div class="uk-position-relative testimonials uk-background-secondary">
+	{{!-- <div class="uk-position-relative testimonials uk-background-secondary">
 		{{> renderIcon name="testimonials" class="testimonials-icon" viewBox="1601 166"}}
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
@@ -141,7 +133,7 @@
 			</ul>
 			{{>renderIcon name="arrow-right" viewBox="228 69"}}
 		</div>
-	</div>
+	</div> --}}
 
 
 	{{/inline}}

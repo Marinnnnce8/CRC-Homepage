@@ -2,14 +2,35 @@
 
 
     @media (min-width: $breakpoint-medium) {
+        padding-top: 22vh;
+
+        .fixed-target {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 88vh;
+        }
+
         &-right {
-            width: calc(100% - 95px);
+            width: calc(50vw - 95px);
+            right: 95px;
+            position: absolute;
+            top: 0;
+            padding-top: 35vh;
+
+            .uk-grid>div:first-of-type {
+                bottom: -6%;
+                position: relative;
+            }
         }
 
         &-left {
-            >div {
-                width: calc(50% + 20px);
-            }
+            // position: absolute;
+            // left: 0;
+            // bottom: 0;
+            padding-top: 35vh;
+            width: calc(50vw + 20px);
 
             img {
                 width: 100%;

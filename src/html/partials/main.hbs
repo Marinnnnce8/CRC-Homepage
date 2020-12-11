@@ -26,18 +26,43 @@
 
 			<div class="uk-navbar-left">
 				<a href="./" class="uk-navbar-item uk-logo">
-					<img src="{{logo}}" alt="{{nb.siteName}} Logo">
+					<img src="../../img/logo.svg" data-uk-svg alt="{{nb.siteName}} Logo">
+					<div class="uk-position-relative uk-overflow-hidden uk-flex uk-flex-middle">
+						<img src="{{logo}}" alt="{{nb.siteName}} Logo">
+					</div>
 				</a>
 			</div>
 
 			{{#if menu}}
 			<div class="uk-navbar-right">
-				<div id="nav">
+				<div id="nav" aria-hidden="true">
 					{{> renderNavigation}}
+					<div class="nav-contact uk-position-relative uk-width-expand uk-text-right uk-flex uk-flex-column uk-flex-between">
+						<div>
+							<div class="uk-flex uk-flex-column">
+								<div>
+									<a href="tel:+4401856881173">+44 (0) 1856 881173</a>
+								</div>
+								<div>
+									<a href="mailto:hello@crcaccountancy.co.uk">hello@crcaccountancy.co.uk</a>
+								</div>
+							</div>
+							<ul class="uk-list">
+								<li><span>4 Soulisquoy Loan</span></li>
+								<li class="uk-margin-remove-top"><span>Kirkwall</span></li>
+								<li class="uk-margin-remove-top"><span>Orkney</span></li>
+								<li class="uk-margin-remove-top"><span>KW15 1BY</span></li>
+							</ul>
+						</div>
+						<a class="uk-display-block callback" href="#">Request a call back{{>renderIcon name="arrow-right-nav" viewBox="92 44" class="uk-margin-small-left"}}</a>
+					</div>
+					<span class="js-icon" hidden>
+						{{>renderIcon name="lovework"}}
+					</span>
 				</div>
-				<a href="#nav" class="uk-navbar-toggle" data-uk-toggle="animation: uk-animation-slide-left;" aria-label="Toggle Navigation" hidden>
+				<button class="nb-navbar-toggle" aria-label="Toggle Navigation">
 					<span role="presentation"></span>
-				</a>
+				</button>
 			</div>
 			{{/if}}
 

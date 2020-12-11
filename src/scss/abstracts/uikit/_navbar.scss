@@ -1,0 +1,10 @@
+@mixin hook-navbar {
+    padding: 34px 39px 0;
+}
+
+@mixin hook-navbar-nav-item {
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    font-weight: $extra-light;
+    text-transform: none;
+}

@@ -6,20 +6,24 @@
 	"ukContainer": "small",
 	"cta": "Find out more",
 	"menu": [{
-			"name": "home",
-			"title": "Home",
-			"url": "home.html"
+			"name": "what-we-do",
+			"title": "What We Do",
+			"url": "what-we-do.html"
 		},
 		{
-			"name": "about",
-			"title": "About",
-			"children": [{
-				"name": "child",
-				"title": "Child"
-			}]
+			"name": "why-crc",
+			"title": "Why CRC?"
 		},
 		{
-			"name": "contact",
+			"name": "who-we-are",
+			"title": "Who We Are"
+		},
+		{
+			"name": "news",
+			"title": "News"
+		},
+		{
+			"name": "Contact",
 			"title": "Contact"
 		}
 	],

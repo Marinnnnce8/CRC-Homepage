@@ -1,80 +1,48 @@
 {{#with context}}
-<div class="context-wrap{{#if secondary}} uk-background-secondary{{/if}}">
+<div class="context {{#if secondary}} uk-background-secondary{{/if}}">
 	{{#> ukContainer size=ukContainer}}
 		{{#*inline "out"}}
 
-            <div class="context">
+            {{#if title}}<h2>{{{title}}}</h2>{{/if}}
 
-                {{#if title}}<h2>{{{title}}}</h2>{{/if}}
+            {{!-- {{#if reverse}}
 
-                {{#if reverse}}
+                <div data-scroll data-scroll-speed="1" class="uk-width-1-2">
+                    <h3 class="uk-text-uppercase">{{subTitle}}</h3>
 
-                    {{#> ukGrid class="uk-grid-large uk-flex uk-child-width-1-2 uk-flex-row-reverse"}}
-                        {{#*inline "cells"}}
+                    {{#each paragraph}}
+                        {{#with this}}
+                            <p>{{text}}</p>
+                        {{/with}}
+                    {{/each}}    
+                </div>
 
-                            <div>
+                <div data-scroll data-scroll-speed="2" class="uk-width-1-2">
+                    <div class="uk-width-1-2" data-scroll data-scroll-speed="2">
+                        <span class="number">{{numberOne}}</span>
+                    </div>
+                    <div class="uk-width-1-2" data-scroll data-scroll-speed="6">
+                        <span class="number">{{numberTwo}}</span>
+                    </div>
+                </div>
 
-                                {{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2"}}
-                                    {{#*inline "cells"}}
-                                        <div data-scroll data-scroll-speed="1">
-                                            <span class="number">{{numberOne}}</span>
-                                        </div>
-                                        <div data-scroll data-scroll-speed="3">
-                                            <span class="number">{{numberTwo}}</span>
-                                        </div>
-                                    {{/inline}}
-                                {{/ukGrid}}      
+            {{else}} --}}
+            <div class="uk-position-relative context-wrap uk-clearfix">
+                <span class="context-target" id="context-{{@index}}-target"></span>
 
-                            </div>
-                            <div data-scroll data-scroll-speed="5">
-                                <h3 class="uk-text-uppercase">{{subTitle}}</h3>
+                <span class="number" data-scroll data-scroll-speed="5">{{numberOne}}</span>
+                <span class="number" data-scroll data-scroll-speed="3">{{numberTwo}}</span>
 
-                                {{#each paragraph}}
-                                    {{#with this}}
-
-                                        <p>{{text}}</p>
-                                    {{/with}}
-                                {{/each}}    
-
-                            </div>
-                        {{/inline}}
-                    {{/ukGrid}}
-
-                {{else}}
-
-                    {{#> ukGrid class="uk-grid-large uk-flex uk-child-width-1-2"}}
-                        {{#*inline "cells"}}
-
-                            <div>
-
-                                {{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2"}}
-                                    {{#*inline "cells"}}
-                                        <div data-scroll data-scroll-speed="1">
-                                            <span class="number">{{numberOne}}</span>
-                                        </div>
-                                        <div data-scroll data-scroll-speed="3">
-                                            <span class="number">{{numberTwo}}</span>
-                                        </div>
-                                    {{/inline}}
-                                {{/ukGrid}}      
-
-                            </div>
-                            <div data-scroll data-scroll-speed="5">
-                                <h3 class="uk-text-uppercase">{{subTitle}}</h3>
-
-                                {{#each paragraph}}
-                                    {{#with this}}
-
-                                        <p>{{text}}</p>
-                                    {{/with}}
-                                {{/each}}    
-
-                            </div>
-                        {{/inline}}
-                    {{/ukGrid}}
-                {{/if}}
-                        
-            </div>
+                <div class="uk-width-1-2 context-text" data-scroll data-scroll-speed="1">
+                    <h3 class="uk-text-uppercase">{{subTitle}}</h3>
+                    {{#each paragraph}}
+                        {{#with this}}
+                            <p>{{text}}</p>
+                        {{/with}}
+                    {{/each}} 
+                </div>                   
+            </div>                   
+            {{!-- {{/if}} --}}
 
 		{{/inline}}
 	{{/ukContainer}}

@@ -59,18 +59,77 @@
 	}
 
 	&-mobile {
-		background-color: $white;
 		border-top: 1px solid $off-white;
-		height: calc(100% - 80px);
+		height: 100%;
 		left: 0;
-		overflow: auto;
 		position: fixed;
-		top: 80px;
+		top: 0;
 		width: 100%;
 		z-index: 1001;
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		&::before {
+			position: absolute;
+			content: '';
+			background-color: $global-color;
+			z-index: 1000;
+			border-radius: 50%;
+			top: 70px;
+			right: 70px;
+			transform: scale(0);
+			width: 2px;
+			height: 2px;
+			transition: $transition;
+			transform-origin: 50% 50%;
+		}
+
+		&[aria-hidden='false'] {
+			&::before {
+				animation: circleScale linear .25s forwards;
+			}
+		}
+
+		&[aria-hidden='true'] {
+			&::before {
+				transform: scale(2200);
+				animation: circleScaleBackwards .45s linear forwards;
+			}
+
+			.uk-navbar-nav {
+				transform: translateX(200%);
+				animation: navFromLeftBackwards .15s ease-in forwards;
+			}
+
+			.icon-lovework {
+				transform: translateX(-200%);
+				animation: navFromRightBackwards .15s ease-in forwards;
+			}
+
+			.nav-contact {
+				transform: translateX(200%);
+				animation: navFromRightBackwards .15s ease-in forwards;
+			}
+		}
+
+		.icon-lovework {
+			fill: rgba($white, .5);
+			width: calc(50vw + 90px);
+			position: absolute;
+			top: -45px;
+			right: -37px;
+			z-index: 1001;
+			animation: navFromRight ease-in .35s forwards;
+			transform: translateX(200%);
+			pointer-events: none;
+		}
 
 		.uk-navbar-nav {
 			display: block;
+			z-index: 1001;
+			left: 0;
+			transform: translateX(-200%);
+			animation: navFromLeft .15s ease-in .2s forwards;
 
 			>li {
 				padding: $global-small-gutter $global-small-gutter 0;
@@ -84,7 +143,7 @@
 
 		.uk-navbar-item,
 		.uk-navbar-nav>li>a,
-		.uk-navbar-toggle {
+		.nb-navbar-toggle {
 			display: block;
 			min-height: 0;
 			padding: 0;
@@ -110,6 +169,16 @@
 				font-weight: 700;
 				margin-top: 1em;
 			}
+		}
+	}
+
+	@media (min-width: $breakpoint-large) {
+		&-mobile {
+			display: flex;
+			justify-content: space-between;
+			padding: 195px 130px 77px 140px;
+			width: calc(100% - 270px);
+			height: calc(100% - 272px);
 		}
 	}
 }
