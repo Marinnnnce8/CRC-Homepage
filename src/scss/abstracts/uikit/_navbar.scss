@@ -1,5 +1,14 @@
 @mixin hook-navbar {
-    padding: 34px 39px 0;
+    padding: 17px 10px 0 5px;
+    align-items: flex-start;
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        padding: 34px 39px 0;
+    }
+}
+
+@mixin hook-navbar-item {
+    min-height: 0;
 }
 
 @mixin hook-navbar-nav-item {
@@ -7,4 +16,12 @@
     letter-spacing: -0.025em;
     font-weight: $extra-light;
     text-transform: none;
+
+    @media (max-width: $breakpoint-large) {
+        font-size: 60px;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        font-size: 34px;
+    }
 }

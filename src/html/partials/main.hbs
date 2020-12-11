@@ -26,7 +26,7 @@
 
 			<div class="uk-navbar-left">
 				<a href="./" class="uk-navbar-item uk-logo">
-					<img src="../../img/logo.svg" data-uk-svg alt="{{nb.siteName}} Logo">
+					<img src="../img/logo.svg" data-uk-svg alt="{{nb.siteName}} Logo">
 					<div class="uk-position-relative uk-overflow-hidden uk-flex uk-flex-middle">
 						<img src="{{logo}}" alt="{{nb.siteName}} Logo">
 					</div>
@@ -37,7 +37,7 @@
 			<div class="uk-navbar-right">
 				<div id="nav" aria-hidden="true">
 					{{> renderNavigation}}
-					<div class="nav-contact uk-position-relative uk-width-expand uk-text-right uk-flex uk-flex-column uk-flex-between">
+					<div class="nav-contact uk-position-relative uk-width-expand uk-text-right">
 						<div>
 							<div class="uk-flex uk-flex-column">
 								<div>
@@ -56,8 +56,10 @@
 						</div>
 						<a class="uk-display-block callback" href="#">Request a call back{{>renderIcon name="arrow-right-nav" viewBox="92 44" class="uk-margin-small-left"}}</a>
 					</div>
-					<span class="js-icon" hidden>
+					<span class="nav-icon" hidden>
 						{{>renderIcon name="lovework"}}
+						{{>renderIcon name="lovework-tablet" viewBox="605 1024"}}
+						{{>renderIcon name="lovework-mobile" viewBox="319 540"}}
 					</span>
 				</div>
 				<button class="nb-navbar-toggle" aria-label="Toggle Navigation">

@@ -151,7 +151,7 @@ var main = {
 		navToggleButton.addEventListener('click', function() {
 			var nav = document.getElementById('nav');
 			var header = document.querySelector('.header');
-			var navIcon = document.querySelector('.js-icon');
+			var navIcon = document.querySelector('.nav-icon');
 			if(nav.getAttribute('aria-hidden') === 'false') {
 				nav.setAttribute('aria-hidden', 'true');
 				header.classList.remove('nav-open');
@@ -163,9 +163,6 @@ var main = {
 				header.classList.add('nav-open');
 				nav.removeAttribute('hidden');
 				nav.setAttribute('aria-hidden', 'false');
-				// setTimeout(function(){
-				// 	nav.style.overflowY = 'auto';
-				// }, 470);
 				navIcon.removeAttribute('hidden');
 			}
 		});
