@@ -18,7 +18,8 @@
     "uikit": [
       "lightbox",
       "notification",
-      "slideshow"
+      "slideshow",
+      "slider"
     ]
   },
   "scripts": {

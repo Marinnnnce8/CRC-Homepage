@@ -75,12 +75,12 @@
 		{{/each}}
 	</div>
 
-	{{!-- <div class="uk-flex uk-flex-between uk-light start" data-scroll data-scroll-section>
+	<div class="uk-flex uk-flex-between uk-light start" data-scroll data-scroll-section>
 		<div class="uk-flex uk-flex-column uk-flex-right">
 			<img src="../img/home-5.jpg" loading="lazy" width="717" height="980" alt="image">
 		</div>
 		<div class="uk-background-primary uk-position-relative uk-width-expand uk-flex uk-flex-column uk-flex-right">
-			<ul class="uk-list">
+			<ul class="uk-list uk-margin-remove-bottom">
 				<li><h2>Are you</h2></li>
 				<li><h2>ready to</h2></li>
 				<li><h2>get</h2></li>
@@ -88,15 +88,15 @@
 			</ul>
 			{{>renderIcon name="arrow-right" viewBox="228 69"}}
 		</div>
-	</div> --}}
+	</div>
 
 
-	{{!-- <div class="uk-position-relative testimonials uk-background-secondary">
+	<div class="uk-position-relative testimonials uk-background-secondary">
 		{{> renderIcon name="testimonials" class="testimonials-icon" viewBox="1601 166"}}
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
 				<h2>See who<br> we’ve helped</h2>
-				{{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l"}}
+				{{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-visible@l"}}
 					{{#*inline "cells"}}
 
 					{{#each page.testimonials}}
@@ -109,12 +109,29 @@
 
 					{{/inline}}
 				{{/ukGrid}}
-
 			{{/inline}}
 		{{/ukContainer}}
+		<div class="uk-hidden@l">
+			<div data-uk-slider>
+				<div class="uk-position-relative uk-visible-toggle">
+					<ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+						{{#each page.testimonials}}
+							{{#with this}}
+							<li class="uk-flex uk-flex-center">
+								{{> card}}
+							</li>
+							{{/with}}
+						{{/each}}
+					</ul>
+				</div>
+
+				<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+			</div>
+		</div>
 	</div>
 
-	<div class="experience">
+	{{!-- <div class="experience">
 		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
 			{{#*inline "cells"}}
 				<div>

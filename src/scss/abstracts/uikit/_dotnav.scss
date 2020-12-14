@@ -1,0 +1,8 @@
+@mixin hook-dotnav-item {
+    border: 2px solid $global-color;
+    transition: $transition;
+}
+
+@mixin hook-dotnav-item-active {
+    transform: scale(1.2);
+}

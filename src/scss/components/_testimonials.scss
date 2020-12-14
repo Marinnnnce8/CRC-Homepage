@@ -1,19 +1,70 @@
 .testimonials {
-    @media (min-width: $breakpoint-medium) {
-        padding: 230px 0 70px;
+    padding: 115px 0 20px;
 
-        h2 {
-            margin-bottom: 50px;
-        }
+    h2 {
+        margin-bottom: 48px;
     }
 
     &-icon {
-        // width: 100%;
         fill: rgba($global-color, .1);
         position: absolute;
-        // left: 0;
-        // right: 0;
-        bottom: 450px;
+        top: 257px;
         transform: translateY(-50%);
+    }
+
+    .uk-slideshow-items li {
+        min-height: 460px;
+    }
+
+    .uk-card>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .uk-card-media-top {
+        max-width: 413px;
+    }
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        padding: 170px 0 13px;
+
+        &-icon {
+            top: 455px;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium-max) {
+        padding: 230px 0 70px;
+
+        &-icon {
+            top: 650px;
+        }
+
+        .uk-slideshow-items li {
+            min-height: 677px;
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        p {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: $breakpoint-large) and (min-width: $breakpoint-xsmall-max) {
+        h2 {
+            margin-bottom: 165px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        p {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 44px;
+        }
     }
 }

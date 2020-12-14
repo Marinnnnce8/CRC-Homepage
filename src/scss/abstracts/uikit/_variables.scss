@@ -107,7 +107,7 @@ $container-large-max-width: 1400px;
 $container-xlarge-max-width: 1600px;
 $container-padding-horizontal: 20px;
 $container-padding-horizontal-s: 2 * $global-gutter;
-$container-padding-horizontal-m: $global-medium-gutter;
+$container-padding-horizontal-m: 2 * $global-gutter;
 
 
 //
@@ -184,3 +184,11 @@ $navbar-nav-item-color: $global-inverse-color;
 $navbar-nav-item-hover-color: $global-warning-background;
 $navbar-nav-item-onclick-color: $global-warning-background;
 $navbar-nav-item-active-color: $global-warning-background;
+
+
+//
+// Dotnav
+//
+$dotnav-item-background: transparent;
+$dotnav-item-active-background: $global-color;
+$dotnav-margin-horizontal: $global-margin;

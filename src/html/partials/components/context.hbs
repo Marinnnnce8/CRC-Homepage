@@ -33,7 +33,7 @@
                 <span class="number uk-visible@l" data-scroll data-scroll-speed="5">{{numberOne}}</span>
                 <span class="number uk-visible@l" data-scroll data-scroll-speed="3">{{numberTwo}}</span>
 
-                <div class="number-wrap uk-hidden@l">
+                <div class="number-wrap uk-hidden@l{{#if secondary}} uk-position-left-top{{else}} uk-position-right-top{{/if}}">
                     <span class="number">{{numberOne}}</span>
                     <span class="number">{{numberTwo}}</span>
                 </div>

@@ -7,3 +7,9 @@ p {
         font-size: 16px;
     }
 }
+
+h2 {
+    @media (max-width: $breakpoint-large) and (min-width: $breakpoint-small) {
+        font-size: 80px;
+    }
+}

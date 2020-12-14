@@ -1,15 +1,23 @@
 // .uk-card
 @mixin hook-card {
-    @media (min-width: $breakpoint-medium) {
-        width: 413px;
+    // width: 100%;
+    max-width: 280px;
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        max-width: 413px;
     }
 }
 
 // .uk-card-body
 @mixin hook-card-body {
+    padding: 25px 40px;
 
     p {
         line-height: 1.5;
+    }
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        padding: 20px 70px;
     }
 }
 

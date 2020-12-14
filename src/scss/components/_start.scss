@@ -1,7 +1,32 @@
 $marginTop: 60;
 
 .start {
-    @media (min-width: $breakpoint-medium) {
+    overflow-x: hidden;
+
+    &:not(.start-last) .uk-background-primary {
+        padding-bottom: 35px;
+    }
+
+    img {
+        max-width: calc(100vw - 20px);
+    }
+
+    svg {
+        width: 227px;
+        height: 69px;
+    }
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        &:not(.start-last) .uk-background-primary {
+            padding-bottom: 85px;
+        }
+
+        img {
+            max-width: calc(100vw - 60px);
+        }
+    }
+
+    @media (min-width: $breakpoint-medium-max) {
         &.start-last {
             .uk-background-primary {
                 padding: 157px 0 256px 207px;
@@ -21,8 +46,6 @@ $marginTop: 60;
         }
 
         svg {
-            width: 227px;
-            height: 69px;
             position: absolute;
             left: 0;
         }
@@ -31,6 +54,27 @@ $marginTop: 60;
             li:nth-of-type(#{$i}):not(:last-of-type) {
                 margin-bottom: #{$marginTop + $i * 20}px;
             }
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        flex-direction: column;
+
+        .uk-list {
+            padding: 60px 60px 40px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+
+        .uk-list {
+            padding: 47px 20px 20px;
+        }
+    }
+
+    @media (max-width: $breakpoint-large) and (min-width: $breakpoint-small) {
+        h2 {
+            font-size: 100px;
         }
     }
 }
