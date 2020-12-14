@@ -105,12 +105,15 @@
 	<script src="./js/main.js"></script>
 
 	<script>
-		(function () {
-        	var scroll = new LocomotiveScroll({
-				el: document.querySelector('[data-scroll-container]'),
-    			smooth: true
-			});
-    	})();
+		var isTablet = window.matchMedia("(max-width: 1920px)").matches;
+		if(!isTablet) {
+			(function () {
+				var scroll = new LocomotiveScroll({
+					el: document.querySelector('[data-scroll-container]'),
+					smooth: true
+				});
+			})();
+		}
 	</script>
 </body>
 </html>

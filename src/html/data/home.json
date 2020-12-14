@@ -1,7 +1,6 @@
 {
 	"h1": "Coaching, accountancy & team development",
 	"banner": {
-		"size": "small",
 		"src": ".\/img\/banner-home.jpg",
 		"width": "780",
 		"height": "758",
@@ -113,6 +112,7 @@
 		},
 		{
 			"context": {
+				"secondary": true,
 				"numberOne": "0",
 				"numberTwo": "3",
 				"subTitle": "Dream Team",

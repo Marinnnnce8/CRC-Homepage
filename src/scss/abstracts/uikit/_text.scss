@@ -1,6 +1,14 @@
 //.uk-text-lead
 @mixin hook-text-lead {
 	font-weight: $base-body-font-weight;
+
+	@media (max-width: $breakpoint-large) {
+		font-size: 34px;
+	}
+
+	@media (max-width: $breakpoint-small) {
+		font-size: 20px;
+	}
 }
 
 //.uk-text-large

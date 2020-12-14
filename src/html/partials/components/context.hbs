@@ -5,7 +5,7 @@
 
             {{#if title}}<h2>{{{title}}}</h2>{{/if}}
 
-            {{!-- {{#if reverse}}
+            {{!-- {{#if !secondary}}
 
                 <div data-scroll data-scroll-speed="1" class="uk-width-1-2">
                     <h3 class="uk-text-uppercase">{{subTitle}}</h3>
@@ -30,11 +30,16 @@
             <div class="uk-position-relative context-wrap uk-clearfix">
                 <span class="context-target" id="context-{{@index}}-target"></span>
 
-                <span class="number" data-scroll data-scroll-speed="5">{{numberOne}}</span>
-                <span class="number" data-scroll data-scroll-speed="3">{{numberTwo}}</span>
+                <span class="number uk-visible@l" data-scroll data-scroll-speed="5">{{numberOne}}</span>
+                <span class="number uk-visible@l" data-scroll data-scroll-speed="3">{{numberTwo}}</span>
 
-                <div class="uk-width-1-2 context-text" data-scroll data-scroll-speed="1">
-                    <h3 class="uk-text-uppercase">{{subTitle}}</h3>
+                <div class="number-wrap uk-hidden@l">
+                    <span class="number">{{numberOne}}</span>
+                    <span class="number">{{numberTwo}}</span>
+                </div>
+
+                <div class="uk-width-1-2@l context-text" data-scroll data-scroll-speed="1">
+                    <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
                     {{#each paragraph}}
                         {{#with this}}
                             <p>{{text}}</p>

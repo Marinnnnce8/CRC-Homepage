@@ -1,8 +1,8 @@
 {{#> main}}
 	{{#*inline "main"}}
 	
-	<div>
-		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
+	<div class="uk-visible@l">
+		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2@l"}}
 			{{#*inline "cells"}}
 				<div data-scroll data-scroll-speed="3">
 					<img src="../img/home-1.jpg" loading="lazy" width="573" height="846" alt="image">
@@ -14,7 +14,7 @@
 		{{/ukGrid}}
 	</div>
 
-	<div class="uk-position-relative images">
+	<div class="uk-position-relative images uk-visible@l">
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
 				<span class="fixed-target images-target"></span>
@@ -40,6 +40,31 @@
 		<div class="uk-flex images-left images-target" data-scroll data-scroll-speed="2">
 			<img src="../img/home-4.jpg" loading="lazy" width="376" height="618" alt="image">
 		</div>
+	</div>
+
+	<div class="uk-hidden@l about">
+		{{#> ukContainer size=ukContainer}}
+			{{#*inline "out"}}		
+				<img src="../img/home-1.jpg" loading="lazy" width="375" height="618" alt="image">
+				{{#> ukGrid class="uk-grid-large uk-flex uk-child-width-1-2@s" dataUkGrid="masonry: true"}}
+					{{#*inline "cells"}}
+						<div>
+							<p class="uk-text-lead">If you could have more time, more efficient business processes and a happier team, would you take it?</p>
+						</div>
+						<div>
+							<img src="../img/home-3.jpg" loading="lazy" width="376" height="618" alt="image">
+						</div>
+						<div>
+							<img src="../img/home-2.jpg" loading="lazy" width="375" height="618" alt="image">
+						</div>
+						<div>
+							<p class="uk-text-lead">At CRC, that’s exactly what we do. We work with ambitious and creative business owners just like you to help take things to the next level.</p>
+						</div>
+					{{/inline}}
+				{{/ukGrid}}		
+				<img src="../img/home-4.jpg" loading="lazy" width="376" height="618" alt="image">
+			{{/inline}}
+		{{/ukContainer}}			
 	</div>
 
 	<div>

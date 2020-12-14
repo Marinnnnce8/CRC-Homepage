@@ -1,12 +1,59 @@
 .context {
+    padding: 100px 0;
+
+    h2 {
+        margin-bottom: 80px;
+    }
+
+    .number-wrap {
+        position: absolute;
+        top: 0;
+    }
+
+    &.uk-background-secondary .number-wrap {
+        left: 0;
+    }
+
+    &:not(.uk-background-secondary) .number-wrap {
+        right: 0;
+    }
+
     .number {
-        font-size: 450px;
         line-height: 100px;
+        font-size: 120px;
         font-family: $font-secondary;
     }
 
-    @media (min-width: $breakpoint-medium) {
-        padding-bottom: 80px;
+    p {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: -15px;
+            height: 2px;
+            width: 40px;
+            background-color: rgba($global-color, .1);
+        }
+    }
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        h2 {
+            margin-top: 40px;
+        }
+
+        .number {
+            font-size: 200px;
+        }
+
+        p {
+            padding-left: 40px;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium-max) {
+        padding: 0 0 80px;
 
         h2 {
             margin-top: 172px;
@@ -15,6 +62,7 @@
         .number {
             float: left;
             width: 25%;
+            font-size: 450px;
         }
 
         .uk-width-1-2 {
@@ -38,19 +86,42 @@
             left: 0;
             height: 88vh;
         }
+    }
 
-        p {
-            padding-left: 40px;
-            position: relative;
+    @media (max-width: $breakpoint-large) and (min-width: $breakpoint-small) {
+        h2 {
+            font-size: 80px;
+        }
 
-            &::before {
-                position: absolute;
-                content: '';
-                left: 0;
-                top: -15px;
-                height: 2px;
-                width: 40px;
-                background-color: rgba($global-color, .1);
+        h3 {
+            font-size: 60px;
+        }
+
+        &.uk-background-secondary {
+            .context-text {
+                padding-left: 240px;
+            }
+        }
+
+        &:not(.uk-background-secondary) .context-text {
+            padding-right: 240px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        &.uk-background-secondary h3 {
+            justify-content: flex-end;
+        }
+
+        // &:not(.uk-background-secondary) .number-wrap {
+        //     right: 0;
+        // }
+        h3 {
+            margin-top: 50px;
+            display: flex;
+
+            span {
+                max-width: 130px;
             }
         }
     }

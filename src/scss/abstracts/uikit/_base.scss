@@ -9,4 +9,12 @@
 @mixin hook-base-h3 {
     font-weight: $light;
     margin-bottom: $global-large-margin + 15;
+
+    @media (max-width: $breakpoint-large) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        font-size: 24px;
+    }
 }

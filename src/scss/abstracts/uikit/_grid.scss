@@ -1,0 +1,13 @@
+@mixin hook-grid-misc {
+    @media (max-width: $breakpoint-small) {
+
+        *+.uk-grid-margin-large,
+        .uk-grid+.uk-grid-large,
+        .uk-grid+.uk-grid-row-large,
+        .uk-grid-divider.uk-grid-stack>.uk-grid-margin,
+        .uk-grid-large>.uk-grid-margin,
+        .uk-grid-row-large>.uk-grid-margin {
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,17 +1,20 @@
 <div class="banner">
 	<div>
 		{{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer))}}
-			{{#*inline "out"}}
-			<h1 data-scroll data-scroll-speed="-6" class="uk-width-1-2 uk-position-relative uk-position-z-index">{{page.h1}}</h1>
-			<img data-scroll data-scroll-speed="10" data-scroll-position="top" class="uk-position-top-right" src="{{page.banner.src}}" alt="{{default page.banner.alt ""}}" width="{{page.banner.width}}" height="{{page.banner.height}}" loading="lazy">
-			{{#if (neq page.name "home")}}{{> ukBreadcrumb}}{{/if}}
-			{{/inline}}
+		{{#*inline "out"}}
+		<h1 data-scroll data-scroll-speed="1" class="uk-width-1-2 uk-position-relative uk-position-z-index">{{page.h1}}</h1>
+		<img data-scroll data-scroll-speed="10" data-scroll-position="top" src="{{page.banner.src}}"
+			alt="{{default page.banner.alt ""}}" width="{{page.banner.width}}" height="{{page.banner.height}}"
+			loading="lazy">
+		{{#if (neq page.name "home")}}{{> ukBreadcrumb}}{{/if}}
+		{{/inline}}
 		{{/ukContainer}}
 		<div class="banner-bottom">
 			{{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer)) id="banner-direction"}}
-				{{#*inline "out"}}
-					<h1 data-scroll data-scroll-direction="horizontal" data-scroll-target="#banner-direction" data-scroll-speed="70">that helps you build a better business.</h1>
-				{{/inline}}
+			{{#*inline "out"}}
+			<h1 data-scroll data-scroll-direction="horizontal" data-scroll-target="#banner-direction"
+				data-scroll-speed="40">that helps you build a better business.</h1>
+			{{/inline}}
 			{{/ukContainer}}
 		</div>
 	</div>

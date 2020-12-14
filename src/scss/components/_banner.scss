@@ -1,22 +1,31 @@
 .banner {
+	// padding-top: 65px;
+
+
+	.uk-container>:last-child {
+		margin: 85px 0;
+	}
 
 	img {
-		top: 466px;
-		width: calc(50vw - 20px);
+		max-width: calc(100vw - 20px);
+		width: calc(100vw - 20px);
 	}
 
-	&-bottom {
-		padding: 420px 0 218px;
-
-		h1 {
-			min-width: 200vw;
-		}
-	}
-
-	@media (min-width: $breakpoint-small) {
+	@media (min-width: $breakpoint-xsmall-max) {
+		// padding-top: 30px;
 
 		&::before {
 			height: 75%;
+		}
+
+		.uk-container>:last-child {
+			margin: 125px 0;
+		}
+
+		img {
+			right: 0;
+			max-width: calc(100vw - 60px);
+			width: calc(100vw - 60px);
 		}
 
 		.uk-overlay {
@@ -24,11 +33,40 @@
 		}
 	}
 
-	@media (min-width: $breakpoint-large) {
+	@media (min-width: $breakpoint-medium-max) {
 
+
+		img {
+			top: 466px;
+			width: calc(50vw - 20px);
+			position: absolute;
+		}
+
+		// &-bottom {
+		// 	// padding: 420px 0 218px;
+		// 	padding: 0 0 218px;
+
+		// 	h1 {
+		// 		min-width: 120vw;
+		// 	}
+		// }
 
 		.uk-overlay {
 			padding-bottom: $global-large-margin;
+		}
+	}
+
+	@media (max-width: $breakpoint-large) {
+		overflow-x: hidden;
+
+		h1 {
+			font-size: 80px;
+		}
+	}
+
+	@media (max-width: $breakpoint-small) {
+		h1 {
+			font-size: 40px;
 		}
 	}
 }
