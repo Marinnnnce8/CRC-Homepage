@@ -1,9 +1,59 @@
 .experience {
-    @media (min-width: $breakpoint-medium) {
-        padding: 440px 0 150px;
+    overflow-x: hidden;
+    padding: 120px 0 60px;
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        padding: 165px 0 67px;
+    }
+
+    @media (min-width: $breakpoint-medium-max) {
+        padding: 225px 0 150px;
 
         h2 {
             margin-bottom: 83px;
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        .uk-grid {
+            margin-top: 50px;
+
+            div {
+
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        h2 {
+            font-size: 44px;
+        }
+
+        .uk-grid div {
+
+            &:first-of-type img {
+                left: -20px;
+            }
+
+            &:nth-of-type(3) {
+                padding-top: 0;
+
+            }
+
+            img {
+                max-width: calc(100vw - 20px);
+                width: calc(100vw - 20px);
+                position: relative;
+            }
+        }
+
+        p {
+            font-size: 20px;
         }
     }
 }

@@ -37,25 +37,46 @@
 	],
 	"values": [
 		{
-			"src": ".\/img\/loom-logo.png"
+			"src": ".\/img\/loom-logo.png",
+			"alt": "Loom",
+			"width": "90",
+			"height": "90"
 		},
 		{
-			"src": ".\/img\/GoCardless-logo.png"
+			"src": ".\/img\/GoCardless-logo.png",
+			"alt": "GoCardless",
+			"width": "90",
+			"height": "48"
 		},
 		{
-			"src": ".\/img\/Spotlight-Reporting-logo.png"
+			"src": ".\/img\/Spotlight-Reporting-logo.png",
+			"alt": "Spotlight Reporting",
+			"width": "80",
+			"height": "83"
 		},
 		{
-			"src": ".\/img\/ReceiptBank-logo.png"
+			"src": ".\/img\/ReceiptBank-logo.png",
+			"alt": "Receipt Bank",
+			"width": "80",
+			"height": "83"
 		},
 		{
-			"src": ".\/img\/zoom-logo.png"
+			"src": ".\/img\/zoom-logo.png",
+			"alt": "Zoom",
+			"width": "90",
+			"height": "85"
 		},
 		{
-			"src": ".\/img\/xero-logo.png"
+			"src": ".\/img\/xero-logo.png",
+			"alt": "Xero",
+			"width": "100",
+			"height": "29"
 		},
 		{
-			"src": ".\/img\/Quickbooks-logo.png"
+			"src": ".\/img\/Quickbooks-logo.png",
+			"alt": "Quickbooks",
+			"width": "90",
+			"height": "82"
 		}
 	],
 	"contexts": [

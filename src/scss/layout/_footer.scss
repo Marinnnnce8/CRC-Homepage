@@ -1,15 +1,32 @@
 .footer {
 	font-size: .5833334rem;
-	padding: 70px 50px 40px;
+	padding: 50px 20px 33px;
 	color: $global-color;
 	line-height: 1.5;
 
-	@media (max-width: $breakpoint-mobile) {
-		font-size: 0.8rem;
+	@media (min-width: $breakpoint-xsmall-max) {
+		padding: 55px 60px 50px;
+
+		.copyright {
+			padding-right: 20px;
+		}
+	}
+
+	@media (min-width: $breakpoint-medium-max) {
+		padding: 70px 50px 40px;
+	}
+
+	@media (max-width: $breakpoint-small) {
+		.uk-flex {
+			flex-direction: column;
+		}
+
+		.copyright {
+			margin-bottom: 35px;
+		}
 	}
 
 	.watermark {
-
 		a {
 			align-items: center;
 			display: inline-flex;

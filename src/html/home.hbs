@@ -131,8 +131,8 @@
 		</div>
 	</div>
 
-	{{!-- <div class="experience">
-		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
+	 <div class="experience">
+		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2 uk-visible@l"}}
 			{{#*inline "cells"}}
 				<div>
 					<img src="../img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
@@ -147,7 +147,8 @@
 				</div>
 			{{/inline}}
 		{{/ukGrid}}
-		<div class="values">
+
+		<div class="values uk-visible@l">
 			{{#> ukGrid class="uk-grid-small uk-flex"}}
 				{{#*inline "cells"}}
 
@@ -162,6 +163,56 @@
 				{{/inline}}
 			{{/ukGrid}}
 		</div>
+
+		{{#> ukContainer size=ukContainer}}
+			{{#*inline "out"}}
+				<h2>Your experience working with CRC</h2>
+				{{#> ukGrid class="uk-grid-large uk-flex uk-child-width-1-2@s" dataUkGrid="masonry: true"}}
+					{{#*inline "cells"}}
+					<div>
+						<img src="../img/experience-mob-1.jpg" loading="lazy" width="304" height="309" alt="image">
+					</div>
+					<div>
+						<p>Our focus is on building a relationship with you and your business.</p>
+					</div>
+					<div class="uk-hidden@s">
+						<img src="../img/experience-mob-2.jpg" loading="lazy" width="304" height="310" alt="image">
+					</div>
+					<div>
+						<p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
+						<p>We’re constantly evolving the platforms we use to ensure we give you the best experience.</p>						
+					</div>
+					<div class="uk-visible@s">
+						<img src="../img/experience-mob-2.jpg" loading="lazy" width="304" height="310" alt="image">
+					</div>
+					{{/inline}}
+				{{/ukGrid}}									
+			{{/inline}}
+		{{/ukContainer}}
+
+		<div class="values uk-hidden@l">
+			<div data-uk-slider>
+				<div class="uk-position-relative uk-visible-toggle">
+					<ul class="uk-slider-items uk-child-width-1-4 uk-grid uk-grid-small">
+						{{#each page.values}}
+							{{#with this}}
+							<li class="uk-flex uk-flex-center">
+								{{> value}}
+							</li>
+							{{/with}}
+						{{/each}}
+					</ul>
+				</div>
+
+				<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+			</div>
+			{{#> ukContainer size=ukContainer}}
+				{{#*inline "out"}}
+					<p class="uk-text-lead">Value your time, because we do.</p>
+				{{/inline}}
+			{{/ukContainer}}					
+		</div>
 	</div>
 
 	<div class="uk-flex uk-flex-between uk-light start start-last uk-position-relative">
@@ -169,13 +220,13 @@
 			<img src="../img/home-7.jpg" loading="lazy" width="717" height="980" alt="image">
 		</div>
 		<div class="uk-background-primary uk-position-relative uk-width-expand uk-flex uk-flex-column uk-flex-right">
-			<ul class="uk-list">
+			<ul class="uk-list uk-margin-remove-bottom">
 				<li><h2>get</h2></li>
 				<li><h2>started?</h2></li>
 			</ul>
 			{{>renderIcon name="arrow-right" viewBox="228 69"}}
 		</div>
-	</div> --}}
+	</div>
 
 
 	{{/inline}}

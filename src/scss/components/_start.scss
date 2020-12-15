@@ -3,6 +3,10 @@ $marginTop: 60;
 .start {
     overflow-x: hidden;
 
+    &.start-last .uk-background-primary {
+        padding-bottom: 30px;
+    }
+
     &:not(.start-last) .uk-background-primary {
         padding-bottom: 35px;
     }
@@ -17,6 +21,10 @@ $marginTop: 60;
     }
 
     @media (min-width: $breakpoint-xsmall-max) {
+        &.start-last .uk-background-primary {
+            padding-bottom: 90px;
+        }
+
         &:not(.start-last) .uk-background-primary {
             padding-bottom: 85px;
         }
@@ -28,6 +36,10 @@ $marginTop: 60;
 
     @media (min-width: $breakpoint-medium-max) {
         &.start-last {
+            img {
+                max-width: 417px;
+            }
+
             .uk-background-primary {
                 padding: 157px 0 256px 207px;
 
@@ -57,6 +69,14 @@ $marginTop: 60;
         }
     }
 
+    @media (min-width: $breakpoint-large-max) {
+        &.start-last {
+            img {
+                max-width: 617px;
+            }
+        }
+    }
+
     @media (max-width: $breakpoint-large) {
         flex-direction: column;
 
@@ -66,6 +86,9 @@ $marginTop: 60;
     }
 
     @media (max-width: $breakpoint-small) {
+        &.start-last h2 {
+            font-size: 72px;
+        }
 
         .uk-list {
             padding: 47px 20px 20px;
@@ -73,7 +96,11 @@ $marginTop: 60;
     }
 
     @media (max-width: $breakpoint-large) and (min-width: $breakpoint-small) {
-        h2 {
+        &.start-last h2 {
+            font-size: 140px;
+        }
+
+        &:not(.start-last) h2 {
             font-size: 100px;
         }
     }
