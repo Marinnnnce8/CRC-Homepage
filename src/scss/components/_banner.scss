@@ -1,9 +1,9 @@
 .banner {
-	// padding-top: 65px;
+	padding-top: 65px;
 
 
 	.uk-container>:last-child {
-		margin: 85px 0;
+		margin: 0 0 85px;
 	}
 
 	img {
@@ -12,14 +12,14 @@
 	}
 
 	@media (min-width: $breakpoint-xsmall-max) {
-		// padding-top: 30px;
+		padding-top: 30px;
 
 		&::before {
 			height: 75%;
 		}
 
 		.uk-container>:last-child {
-			margin: 125px 0;
+			margin: 0 0 125px;
 		}
 
 		img {
