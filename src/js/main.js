@@ -153,6 +153,7 @@ var main = {
 			var header = document.querySelector('.header');
 			var navIcon = document.querySelector('.nav-icon');
 			if(nav.getAttribute('aria-hidden') === 'false') {
+				document.querySelector('html').classList.remove('has-nav-opened');
 				nav.setAttribute('aria-hidden', 'true');
 				header.classList.remove('nav-open');
 				setTimeout(function(){
@@ -160,6 +161,7 @@ var main = {
 					navIcon.setAttribute('hidden', true);
 				}, 470);
 			} else {
+				document.querySelector('html').classList.add('has-nav-opened');
 				header.classList.add('nav-open');
 				nav.removeAttribute('hidden');
 				nav.setAttribute('aria-hidden', 'false');

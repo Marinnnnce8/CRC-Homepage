@@ -72,6 +72,10 @@
 				transform: translateX(200%);
 				animation: navFromRightBackwards .15s ease-in forwards;
 			}
+
+			.nav-icon .icon {
+				animation: navFromRightBackwards .15s ease-in forwards;
+			}
 		}
 
 		.nav-icon {
