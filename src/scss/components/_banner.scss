@@ -1,14 +1,6 @@
 .banner {
 	padding-top: 65px;
 
-	.banner-title {
-		background-color: $success;
-		z-index: 1;
-		position: relative;
-		height: 100vh;
-		display: inline-block;
-	}
-
 	.uk-container>:last-child {
 		margin: 0 0 85px;
 	}
@@ -45,20 +37,49 @@
 	}
 
 	@media (min-width: $breakpoint-medium-max) {
+		.banner-title {
+			// background-color: $success;
+			z-index: 1;
+			position: relative;
+			height: 130vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			// h1 {
+			// 	span {
+			// 		opacity: 0;
+			// 		transform-origin: center top;
+			// 		transform-style: preserve-3d;
+			// 		transform: translateY(100%) rotateX(-80deg);
+			// 		transition: opacity 0s cubic-bezier(.215, .61, .355, 1), transform 0s cubic-bezier(.215, .61, .355, 1);
+			// 		position: absolute;
+			// 		left: 0;
+			// 		top: 0;
+			// 	}
+
+			// 	&.is-inview span {
+			// 		opacity: 1;
+			// 		transition-duration: 1s;
+			// 		transform: none;
+			// 	}
+			// }
+		}
+
 		img {
 			top: 466px;
 			width: calc(50vw - 20px);
 			position: absolute;
 		}
 
-		// &-bottom {
-		// 	// padding: 420px 0 218px;
-		// 	padding: 0 0 218px;
+		&-bottom {
+			// padding: 420px 0 218px;
+			// padding: 0 0 218px;
 
-		// 	h1 {
-		// 		min-width: 120vw;
-		// 	}
-		// }
+			h1 {
+				min-width: 120vw;
+			}
+		}
 
 		.uk-overlay {
 			padding-bottom: $global-large-margin;

@@ -4,17 +4,17 @@
 	<div class="uk-visible@l">
 		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2@l"}}
 			{{#*inline "cells"}}
-				<div data-scroll data-scroll-speed="3">
-					<img src="./img/home-1.jpg" loading="lazy" width="573" height="846" alt="image">
-				</div>
 				<div>
-					<p data-scroll data-scroll-speed="15" data-scroll-offset="15%, 85%" class="uk-text-lead uk-width-3-5">If you could have more time, more efficient business processes and a happier team, would you take it?</p>
+					<img class="uk-padding-large uk-padding-remove-horizontal" data-scroll data-scroll-speed="3" data-scroll-delay="0.9" data-scroll-repeat src="./img/home-1.jpg" loading="lazy" width="573" height="846" alt="image">
+				</div>
+				<div id="introTarget">
+					<p data-scroll data-scroll-speed="3" class="uk-text-lead uk-width-1-2 uk-padding-large uk-padding-remove-horizontal" data-scroll-sticky data-scroll-target="#introTarget">If you could have more time, more efficient business processes and a happier team, would you take it?</p>
 				</div>
 			{{/inline}}
 		{{/ukGrid}}
 	</div>
 
-	{{!-- <div class="uk-position-relative images uk-visible@l">
+	<div class="uk-position-relative images uk-visible@l">
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
 				<span class="fixed-target images-target"></span>
@@ -40,7 +40,7 @@
 		<div class="uk-flex images-left images-target" data-scroll data-scroll-speed="2">
 			<img src="./img/home-4.jpg" loading="lazy" width="376" height="618" alt="image">
 		</div>
-	</div> --}}
+	</div>
 
 {{!-- 	<div class="uk-hidden@l about">
 		{{#> ukContainer size=ukContainer}}
