@@ -19,9 +19,9 @@
 	<link rel="stylesheet" href="./css/uikit-theme.min.css" />
 	<link rel="stylesheet" href="./css/main.min.css" />
 </head>
-<body data-load-components="{{loadComponents}}">
+<body data-load-components="{{loadComponents}}" data-scroll-container>
 
-	<header class="header uk-background-default">
+    <header class="header uk-background-default">
 		<nav class="uk-navbar-container uk-navbar uk-navbar-transparent" data-uk-navbar>
 
 			<div class="uk-navbar-left">
@@ -35,7 +35,7 @@
 
 			{{#if menu}}
 			<div class="uk-navbar-right">
-				<div id="nav" aria-hidden="true">
+				<div id="nav" class="nb-nav nb-nav-mobile" aria-hidden="true" hidden>
 					{{> renderNavigation}}
 					<div class="nav-contact uk-position-relative uk-width-expand uk-text-right">
 						<div>
@@ -56,7 +56,7 @@
 						</div>
 						<a class="uk-display-block callback" href="#">Request a call back{{>renderIcon name="arrow-right-nav" viewBox="92 44" class="uk-margin-small-left"}}</a>
 					</div>
-					<span class="nav-icon" hidden>
+					<span class="nav-icon">
 						{{>renderIcon name="lovework"}}
 						{{>renderIcon name="lovework-tablet" viewBox="605 1024"}}
 						{{>renderIcon name="lovework-mobile" viewBox="319 540"}}
@@ -71,7 +71,7 @@
 		</nav>
 	</header>
 
-	<main data-scroll-container>
+	<main>
 
 		{{#if page.banner}}
 			{{> banner}}
@@ -99,25 +99,19 @@
 	</footer>
 
 	<script src="./js/svgxuse.min.js"></script>
-	<script src="./js/uikit-core.min.js"></script>
 	<script src="./js/locomotive-scroll.min.js"></script>
+	<script src="./js/uikit-core.min.js"></script>
 	<script src="./js/nbkit.min.js"></script>
 	<script src="./js/main.js"></script>
 
 	<script>
 		var isTablet = window.matchMedia("(max-width: 1200px)").matches;
 		if(!isTablet) {
-			(function () {
-				var scroll = new LocomotiveScroll({
-					el: document.querySelector('[data-scroll-container]'),
-					smooth: true
-				});
-			})();
+			var scroll = new LocomotiveScroll({
+				el: document.querySelector('[data-scroll-container]'),
+				smooth: true
+			});
 		}
-		var scroll = new LocomotiveScroll({
-			el: document.querySelector('[data-scroll-container]'),
-			smooth: true
-		});
 	</script>
 </body>
 </html>

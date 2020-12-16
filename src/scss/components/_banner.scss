@@ -1,6 +1,13 @@
 .banner {
 	padding-top: 65px;
 
+	.banner-title {
+		background-color: $success;
+		z-index: 1;
+		position: relative;
+		height: 100vh;
+		display: inline-block;
+	}
 
 	.uk-container>:last-child {
 		margin: 0 0 85px;
@@ -13,6 +20,10 @@
 
 	@media (min-width: $breakpoint-xsmall-max) {
 		padding-top: 30px;
+
+		h1 {
+			padding-right: 70px;
+		}
 
 		&::before {
 			height: 75%;
@@ -34,8 +45,6 @@
 	}
 
 	@media (min-width: $breakpoint-medium-max) {
-
-
 		img {
 			top: 466px;
 			width: calc(50vw - 20px);

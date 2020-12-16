@@ -152,9 +152,11 @@ var main = {
 			var nav = document.getElementById('nav');
 			var header = document.querySelector('.header');
 			var navIcon = document.querySelector('.nav-icon');
+			// var navbarNav = document.querySelector('.uk-navbar-nav');
 			if(nav.getAttribute('aria-hidden') === 'false') {
 				document.querySelector('html').classList.remove('has-nav-opened');
 				nav.setAttribute('aria-hidden', 'true');
+				// navbarNav.setAttribute('hidden', true);
 				header.classList.remove('nav-open');
 				setTimeout(function(){
 					nav.setAttribute('hidden', true);
@@ -162,6 +164,7 @@ var main = {
 				}, 470);
 			} else {
 				document.querySelector('html').classList.add('has-nav-opened');
+				// navbarNav.removeAttribute('hidden');
 				header.classList.add('nav-open');
 				nav.removeAttribute('hidden');
 				nav.setAttribute('aria-hidden', 'false');
