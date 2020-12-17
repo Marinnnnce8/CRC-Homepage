@@ -35,7 +35,20 @@
     }
 
     @media (min-width: $breakpoint-medium-max) {
-        padding: 230px 0 70px;
+        // padding: 230px 0 70px;
+        // height: 300vh;
+
+        &-container {
+            padding-top: 15vh;
+            min-height: 85vh;
+        }
+
+        &-bottom {
+            >div {
+                margin: 0 0 125px;
+                min-width: 1680px;
+            }
+        }
 
         &-icon {
             top: 650px;

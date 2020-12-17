@@ -19,84 +19,87 @@
 	<link rel="stylesheet" href="./css/uikit-theme.min.css" />
 	<link rel="stylesheet" href="./css/main.min.css" />
 </head>
-<body data-load-components="{{loadComponents}}" data-scroll-container>
+<body data-load-components="{{loadComponents}}">
+	<div data-scroll-container>
 
-    <header class="header uk-background-default">
-		<nav class="uk-navbar-container uk-navbar uk-navbar-transparent" data-uk-navbar>
+		<header class="header uk-background-default">
+			<nav class="uk-navbar-container uk-navbar uk-navbar-transparent" data-uk-navbar>
 
-			<div class="uk-navbar-left">
-				<a href="./" class="uk-navbar-item uk-logo">
-					<img src="./img/logo.svg" data-uk-svg alt="{{nb.siteName}} Logo">
-					<div class="uk-position-relative uk-overflow-hidden uk-flex uk-flex-middle">
-						<img src="{{logo}}" alt="{{nb.siteName}} Logo">
-					</div>
-				</a>
-			</div>
-
-			{{#if menu}}
-			<div class="uk-navbar-right">
-				<div id="nav" class="nb-nav nb-nav-mobile" aria-hidden="true" hidden>
-					{{> renderNavigation}}
-					<div class="nav-contact uk-position-relative uk-width-expand uk-text-right">
-						<div>
-							<div class="uk-flex uk-flex-column">
-								<div>
-									<a href="tel:+4401856881173">+44 (0) 1856 881173</a>
-								</div>
-								<div>
-									<a href="mailto:hello@crcaccountancy.co.uk">hello@crcaccountancy.co.uk</a>
-								</div>
-							</div>
-							<ul class="uk-list">
-								<li><span>4 Soulisquoy Loan</span></li>
-								<li class="uk-margin-remove-top"><span>Kirkwall</span></li>
-								<li class="uk-margin-remove-top"><span>Orkney</span></li>
-								<li class="uk-margin-remove-top"><span>KW15 1BY</span></li>
-							</ul>
+				<div class="uk-navbar-left">
+					<a href="./" class="uk-navbar-item uk-logo">
+						<img src="./img/logo.svg" data-uk-svg alt="{{nb.siteName}} Logo">
+						<div class="uk-position-relative uk-overflow-hidden uk-flex uk-flex-middle">
+							<img src="{{logo}}" alt="{{nb.siteName}} Logo">
 						</div>
-						<a class="uk-display-block callback" href="#">Request a call back{{>renderIcon name="arrow-right-nav" viewBox="92 44" class="uk-margin-small-left"}}</a>
-					</div>
-					<span class="nav-icon">
-						{{>renderIcon name="lovework"}}
-						{{>renderIcon name="lovework-tablet" viewBox="605 1024"}}
-						{{>renderIcon name="lovework-mobile" viewBox="319 540"}}
-					</span>
+					</a>
 				</div>
-				<button class="nb-navbar-toggle" aria-label="Toggle Navigation">
-					<span role="presentation"></span>
-				</button>
-			</div>
+
+				{{#if menu}}
+				<div class="uk-navbar-right">
+					<div id="nav" class="nb-nav nb-nav-mobile" aria-hidden="true" hidden>
+						{{> renderNavigation}}
+						<div class="nav-contact uk-position-relative uk-width-expand uk-text-right">
+							<div>
+								<div class="uk-flex uk-flex-column">
+									<div>
+										<a href="tel:+4401856881173">+44 (0) 1856 881173</a>
+									</div>
+									<div>
+										<a href="mailto:hello@crcaccountancy.co.uk">hello@crcaccountancy.co.uk</a>
+									</div>
+								</div>
+								<ul class="uk-list">
+									<li><span>4 Soulisquoy Loan</span></li>
+									<li class="uk-margin-remove-top"><span>Kirkwall</span></li>
+									<li class="uk-margin-remove-top"><span>Orkney</span></li>
+									<li class="uk-margin-remove-top"><span>KW15 1BY</span></li>
+								</ul>
+							</div>
+							<a class="uk-display-block callback" href="#">Request a call back{{>renderIcon name="arrow-right-nav" viewBox="92 44" class="uk-margin-small-left"}}</a>
+						</div>
+						<span class="nav-icon">
+							{{>renderIcon name="lovework"}}
+							{{>renderIcon name="lovework-tablet" viewBox="605 1024"}}
+							{{>renderIcon name="lovework-mobile" viewBox="319 540"}}
+						</span>
+					</div>
+					<button class="nb-navbar-toggle" aria-label="Toggle Navigation">
+						<span role="presentation"></span>
+					</button>
+				</div>
+				{{/if}}
+
+			</nav>
+		</header>
+
+		<main>
+
+			{{#if page.banner}}
+				{{> banner}}
+			{{else}}
+				{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+					{{#*inline "out"}}
+						<h1>{{page.h1}}</h1>
+						{{> ukBreadcrumb}}
+					{{/inline}}
+				{{/ukContainer}}
 			{{/if}}
 
-		</nav>
-	</header>
+			{{#> main}}{{/main}}
 
-	<main>
+		</main>
 
-		{{#if page.banner}}
-			{{> banner}}
-		{{else}}
-			{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
-				{{#*inline "out"}}
-					<h1>{{page.h1}}</h1>
-					{{> ukBreadcrumb}}
-				{{/inline}}
-			{{/ukContainer}}
-		{{/if}}
+		<footer class="footer uk-padding-large">
+			<div class="uk-flex uk-flex-between">
+				<div class="copyright">Copyright &copy; 2018 - {{year}} {{nb.clientName}}.</div>
 
-		{{#> main}}{{/main}}
-
-	</main>
-
-	<footer class="footer uk-padding-large">
-		<div class="uk-flex uk-flex-between">
-			<div class="copyright">Copyright &copy; 2018 - {{year}} {{nb.clientName}}.</div>
-
-			<div class="watermark">
-				Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener" href="https://www.nbcommunication.com/">NB</a>
+				<div class="watermark">
+					Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener" href="https://www.nbcommunication.com/">NB</a>
+				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
+
+	</div>
 
 	<script src="./js/svgxuse.min.js"></script>
 	<script src="./js/locomotive-scroll.min.js"></script>

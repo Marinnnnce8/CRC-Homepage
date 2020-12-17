@@ -91,3 +91,19 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 }
+
+.c-fixed {
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
+  opacity: .75;
+  mix-blend-mode: multiply;
+}
+
+.c-fixed,
+.c-fixed_target {
+  position: absolute;
+  top: -100vh;
+  right: 0;
+  left: 0;
+}

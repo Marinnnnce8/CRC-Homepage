@@ -49,11 +49,44 @@ $marginTop: 60;
             }
         }
 
-        &:not(.start-last) .uk-background-primary {
-            padding: 208px 0 277px 100px;
+        &.start-first {
+            height: 200vh;
 
-            svg {
-                bottom: 120px;
+            >.uk-flex {
+                height: 200vh;
+
+                >div {
+                    height: 100vh;
+                }
+            }
+
+            // background-color: #2f60bb;
+
+            // .start-img-box {
+            //     height: 60vh;
+            //     background-color: #57bb2f;
+
+            //     // .uk-background-cover {
+            //     //     height: 60vh;
+            //     // }
+            // }
+        }
+
+        &-img {
+            width: 44.88%;
+            // top: 100vh;
+            position: relative;
+        }
+
+        &:not(.start-last) {
+            .uk-background-primary {
+                .uk-list {
+                    padding: 208px 0 277px 100px;
+                }
+
+                svg {
+                    bottom: 120px;
+                }
             }
         }
 

@@ -1,5 +1,6 @@
 .experience {
-    overflow-x: hidden;
+    overflow: hidden;
+    min-height: 120vh;
     padding: 120px 0 60px;
 
     @media (min-width: $breakpoint-xsmall-max) {

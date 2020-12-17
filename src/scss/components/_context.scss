@@ -20,7 +20,8 @@
     }
 
     .number {
-        line-height: 100px;
+        // line-height: 100px;
+        line-height: 1;
         font-size: 120px;
         font-family: $font-secondary;
     }
@@ -60,33 +61,40 @@
             margin-top: 172px;
         }
 
+        .context-wrap {
+            padding-top: 300px;
+            padding-bottom: 150px;
+            // min-height: 150vh;
+        }
+
         .number {
-            float: left;
-            width: 25%;
+            // float: left;
+            // width: 25%;
+            display: inline-flex;
             font-size: 450px;
         }
 
-        .uk-width-1-2 {
-            width: 49.6%;
-            display: inline-block;
+        .number-lerp {
+            transition-delay: .4s;
+            transition: opacity .6s cubic-bezier(.215, .61, .355, 1), transform .6s cubic-bezier(.215, .61, .355, 1);
         }
 
-        &-wrap {
-            padding-top: 15vh;
-        }
+        // &-wrap {
+        //     padding-top: 15vh;
+        // }
 
-        &-text {
-            float: right;
-            padding-top: 25vh;
-        }
+        // &-text {
+        //     float: right;
+        //     // padding-top: 25vh;
+        // }
 
-        &-target {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 88vh;
-        }
+        // &-target {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     left: 0;
+        //     // height: 88vh;
+        // }
     }
 
     @media (max-width: $breakpoint-large) and (min-width: $breakpoint-small) {

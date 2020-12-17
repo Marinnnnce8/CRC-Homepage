@@ -5,49 +5,37 @@
 
             {{#if title}}<h2>{{{title}}}</h2>{{/if}}
 
-            {{!-- {{#if !secondary}}
+            {{#> ukGrid class="uk-grid-xlarge uk-child-width-1-2@l context-wrap"}}
+                {{#*inline "cells"}}
+                    <div class="uk-visible@l">
+                        {{#> ukGrid class="uk-grid-collapse uk-child-width-1-2"}}
+                            {{#*inline "cells"}}
+                            <div>
+                                <div class="number">{{numberOne}}</div>
+                            </div>
+                            <div>
+                                <div class="number number-lerp">{{numberTwo}}</div>
+                            </div>
+                            {{/inline}}
+                        {{/ukGrid}} 
+                    </div>
 
-                <div data-scroll data-scroll-speed="1" class="uk-width-1-2">
-                    <h3 class="uk-text-uppercase">{{subTitle}}</h3>
-
-                    {{#each paragraph}}
-                        {{#with this}}
-                            <p>{{text}}</p>
-                        {{/with}}
-                    {{/each}}    
-                </div>
-
-                <div data-scroll data-scroll-speed="2" class="uk-width-1-2">
-                    <div class="uk-width-1-2" data-scroll data-scroll-speed="2">
+                    {{!-- <div class="number-wrap uk-hidden@l{{#if secondary}} uk-position-left-top{{else}} uk-position-right-top{{/if}}">
                         <span class="number">{{numberOne}}</span>
-                    </div>
-                    <div class="uk-width-1-2" data-scroll data-scroll-speed="6">
                         <span class="number">{{numberTwo}}</span>
+                    </div> --}}
+                    <div>
+                        <div class="context-text">
+                            <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
+                            {{#each paragraph}}
+                                {{#with this}}
+                                    <p>{{text}}</p>
+                                {{/with}}
+                            {{/each}} 
+                        </div> 
                     </div>
-                </div>
-
-            {{else}} --}}
-            <div class="uk-position-relative context-wrap uk-clearfix">
-                <span class="context-target" id="context-{{@index}}-target"></span>
-
-                <span class="number uk-visible@l" data-scroll data-scroll-speed="5">{{numberOne}}</span>
-                <span class="number uk-visible@l" data-scroll data-scroll-speed="3">{{numberTwo}}</span>
-
-                <div class="number-wrap uk-hidden@l{{#if secondary}} uk-position-left-top{{else}} uk-position-right-top{{/if}}">
-                    <span class="number">{{numberOne}}</span>
-                    <span class="number">{{numberTwo}}</span>
-                </div>
-
-                <div class="uk-width-1-2@l context-text" data-scroll data-scroll-speed="1">
-                    <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
-                    {{#each paragraph}}
-                        {{#with this}}
-                            <p>{{text}}</p>
-                        {{/with}}
-                    {{/each}} 
-                </div>                   
-            </div>                   
-            {{!-- {{/if}} --}}
+                {{/inline}}
+            {{/ukGrid}}                 
 
 		{{/inline}}
 	{{/ukContainer}}
