@@ -10,6 +10,19 @@
     @media (min-width: $breakpoint-medium-max) {
         padding: 225px 0 150px;
 
+        &-image {
+            height: 800px;
+            overflow-y: hidden;
+            position: relative;
+
+            .uk-flex {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 800px;
+            }
+        }
+
         h2 {
             margin-bottom: 83px;
         }

@@ -1,5 +1,5 @@
 .context {
-    overflow-x: hidden;
+    overflow: hidden;
     padding: 100px 0;
 
     h2 {
@@ -57,12 +57,21 @@
     @media (min-width: $breakpoint-medium-max) {
         padding: 0 0 80px;
 
+        &-target {
+            height: 440px;
+            padding-top: 100px;
+        }
+
+        &-stop {
+            height: 70%;
+        }
+
         h2 {
             margin-top: 172px;
         }
 
         .context-wrap {
-            padding-top: 300px;
+            // padding-top: 300px;
             padding-bottom: 150px;
             // min-height: 150vh;
         }
@@ -70,7 +79,8 @@
         .number {
             // float: left;
             // width: 25%;
-            display: inline-flex;
+            // transition: .5s ease-in;
+            height: 280px;
             font-size: 450px;
         }
 
@@ -83,10 +93,10 @@
         //     padding-top: 15vh;
         // }
 
-        // &-text {
-        //     float: right;
-        //     // padding-top: 25vh;
-        // }
+        &-text {
+            position: relative;
+            // top: 300px;
+        }
 
         // &-target {
         //     position: absolute;

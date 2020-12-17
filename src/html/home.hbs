@@ -67,11 +67,11 @@
 		{{/ukContainer}}			
 	</div>
 
-	{{!-- {{#each page.contexts}}
+	{{#each page.contexts}}
 		{{#with this}}
 			{{> context}}
 		{{/with}}
-	{{/each}} --}}
+	{{/each}}
 	
 	{{!-- <div class="start start-first" id="startTarget">
 		<div class="uk-flex uk-flex-between uk-light">
@@ -157,22 +157,28 @@
 		</div>
 	</div>
 
-	<div class="experience">
-		{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2 uk-visible@l"}}
-			{{#*inline "cells"}}
-				<div data-scroll data-scroll-speed="5" id="experienceTarget">
-					<img src="./img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
-				</div>
-				<div data-scroll data-scroll-sticky data-scroll-target="#experienceTarget" data-scroll-speed="1">
-					<div class="uk-width-4-5">
-						<h2 class="uk-text-large">Your experience working with CRC</h2>
-						<p>Our focus is on building a relationship with you and your business.</p>
-						<p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
-						<p>We’re constantly evolving the platforms we use to ensure we give you the best experience.</p>
+	<div class="experience" id="experienceTarget">
+		<div data-scroll data-scroll-sticky data-scroll-target="#experienceTarget" class="uk-visible@l">
+			{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
+				{{#*inline "cells"}}
+					<div data-scroll data-scroll-speed="5" class="experience-image">
+						<div class="uk-flex uk-flex-column">
+							<img src="./img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
+							<img src="./img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
+							<img src="./img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
+						</div>
 					</div>
-				</div>
-			{{/inline}}
-		{{/ukGrid}}
+					<div data-scroll data-scroll-speed="1">
+						<div class="uk-width-4-5">
+							<h2 class="uk-text-large">Your experience working with CRC</h2>
+							<p>Our focus is on building a relationship with you and your business.</p>
+							<p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
+							<p>We’re constantly evolving the platforms we use to ensure we give you the best experience.</p>
+						</div>
+					</div>
+				{{/inline}}
+			{{/ukGrid}}
+		</div>
 
 		{{!--  <div class="values uk-visible@l">
 			{{#> ukGrid class="uk-grid-small uk-flex"}}
