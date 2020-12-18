@@ -9,6 +9,44 @@ var main = {
 
 	init: function() {
 
+		var horizontalContainer = document.getElementsByClassName('testimonials-cards')[0];
+		var isTablet = window.matchMedia("(max-width: 1200px)").matches;
+		if(!isTablet) {
+			var scroll = new LocomotiveScroll({
+				el: document.querySelector('[data-scroll-container]'),
+				smooth: true
+			});
+	
+			scroll.on('scroll', function() {
+				var spaceHolder = document.querySelector('.testimonials-holder');
+				var horizontal = document.querySelector('.testimonials-inner');
+				spaceHolder.style.height = calcDynamicHeight(horizontal) + 'px';
+	
+				function calcDynamicHeight(ref) {
+					var vw = window.innerWidth;
+					var vh = window.innerHeight;
+					var objectWidth = ref.scrollWidth;
+					return objectWidth - vw + vh + 150;
+				}
+
+				var horizontalTitle = document.querySelector('.testimonials-title');
+				var sticky = document.querySelector('.testimonials-sticky');
+				horizontal.style.transform = 'translateX(-' + sticky.offsetTop + 'px)';
+				console.log(sticky.offsetTop);
+
+				var dynamicHeight = calcDynamicHeight(horizontal);
+				if(sticky.offsetTop > dynamicHeight / 1.25){
+					horizontalTitle.setAttribute("data-uk-sticky", "bottom: #sticky-stop");
+				} else {
+					horizontalTitle.setAttribute("data-uk-sticky", "");
+				}
+			});
+		}
+
+		if(horizontalContainer) {
+			this.addMultiListener(window, 'load resize', main.horizontalScroll);
+		}
+
 		nb.profilerStart('main.init');
 
 		// Content
@@ -146,17 +184,24 @@ var main = {
 		return out;
 	},
 
+	//combining multiple event listeners
+	addMultiListener: function(element, eventNames, listener) {
+		var events = eventNames.split(' ');
+		for (var i=0, iLen=events.length; i<iLen; i++) {
+			element.addEventListener(events[i], listener, false);
+		}
+	},
+
+	//nav toggle
 	toggleNavigation: function() {
 		var navToggleButton = document.querySelector('.nb-navbar-toggle');
 		navToggleButton.addEventListener('click', function() {
 			var nav = document.getElementById('nav');
 			var header = document.querySelector('.header');
 			var navIcon = document.querySelector('.nav-icon');
-			// var navbarNav = document.querySelector('.uk-navbar-nav');
 			if(nav.getAttribute('aria-hidden') === 'false') {
 				document.querySelector('html').classList.remove('has-nav-opened');
 				nav.setAttribute('aria-hidden', 'true');
-				// navbarNav.setAttribute('hidden', true);
 				header.classList.remove('nav-open');
 				setTimeout(function(){
 					nav.setAttribute('hidden', true);
@@ -164,17 +209,60 @@ var main = {
 				}, 470);
 			} else {
 				document.querySelector('html').classList.add('has-nav-opened');
-				// navbarNav.removeAttribute('hidden');
 				header.classList.add('nav-open');
 				nav.removeAttribute('hidden');
 				nav.setAttribute('aria-hidden', 'false');
 				navIcon.removeAttribute('hidden');
 			}
 		});
-	}
+	},
+
+	// horizontalScroll: function() {
+	// 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+	// 	if(isIE11) {
+	// 		return;
+	// 	}
+	// 	var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
+	// 	var spaceHolder = document.querySelector('.testimonials-holder');
+
+	// 	if (isDesktop) {
+	// 		var horizontal = document.querySelector('.testimonials-inner');
+	// 		spaceHolder.style.height = calcDynamicHeight(horizontal) + 'px';
+
+	// 		function calcDynamicHeight(ref) {
+	// 			var vw = window.innerWidth;
+	// 			var vh = window.innerHeight;
+	// 			var objectWidth = ref.scrollWidth;
+	// 			return objectWidth - vw + vh + 150;
+	// 		}
+
+	// 		scroll.on('scroll', function() {
+	// 			var horizontalTitle = document.querySelector('.testimonials-title');
+	// 			var sticky = document.querySelector('.testimonials-sticky');
+	// 			horizontal.style.transform = 'translateX(-' + sticky.offsetTop + 'px)';
+	// 			console.log(sticky.offsetTop);
+
+	// 			var dynamicHeight = calcDynamicHeight(horizontal);
+	// 			if(sticky.offsetTop > dynamicHeight / 1.25){
+	// 				horizontalTitle.setAttribute("data-uk-sticky", "bottom: #sticky-stop");
+	// 			} else {
+	// 				horizontalTitle.setAttribute("data-uk-sticky", "");
+	// 			}
+	// 		});
+
+	// 		window.addEventListener('resize', function () {
+	// 			var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
+	// 			if (isDesktop) {
+	// 				spaceHolder.style.height = calcDynamicHeight(horizontal) + 'px';
+	// 			}
+	// 		});
+	// 	} else {
+	// 		spaceHolder.style.height = 0;
+	// 		spaceHolder.style.height = 100 + "%";
+	// 	}
+	// }
 };
 
 uk.ready(function() {
 	main.init();
-	main.toggleNavigation();
 });

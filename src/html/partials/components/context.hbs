@@ -1,5 +1,5 @@
 {{#with context}}
-<div class="context{{#if secondary}} uk-background-secondary{{/if}}">
+<div class="context{{#if secondary}} uk-background-secondary{{/if}}" data-scroll>
 	{{#> ukContainer size=ukContainer}}
 		{{#*inline "out"}}
 
@@ -9,13 +9,11 @@
                 {{#> ukGrid class="uk-grid-xlarge uk-child-width-1-2@l context-wrap"}}
                     {{#*inline "cells"}}
                         <div class="uk-visible@l context-target" data-scroll data-scroll-speed="5" data-scroll-sticky data-scroll-target="#contextTarget{{@index}}">
-                            <div>
-                                <div class="uk-flex-inline number" data-scroll data-scroll-speed="5" data-scroll-delay="1" >
-                                    {{numberOne}}
-                                </div>
-                                <div class="uk-flex-inline number" data-scroll data-scroll-speed="3" data-scroll-delay="0.1">
-                                    {{numberTwo}}
-                                </div>
+                            <div class="uk-flex-inline number" data-scroll data-scroll-speed="5" data-scroll-delay="1" >
+                                {{numberOne}}
+                            </div>
+                            <div class="uk-flex-inline number" data-scroll data-scroll-speed="3" data-scroll-delay="0.1">
+                                {{numberTwo}}
                             </div>
                         </div>
 
@@ -23,19 +21,19 @@
                             <span class="number">{{numberOne}}</span>
                             <span class="number">{{numberTwo}}</span>
                         </div> --}}
-                        <div data-scroll data-scroll-speed="3" data-scroll-delay="1">
-                            <div class="context-text">
+                        <div >
+                            <div class="context-text" data-scroll data-scroll-speed="5">
                                 <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
                                 {{#each paragraph}}
                                     {{#with this}}
                                         <p>{{text}}</p>
                                     {{/with}}
-                                {{/each}} 
-                            </div> 
+                                {{/each}}
+                            </div>
                         </div>
                     {{/inline}}
-                {{/ukGrid}} 
-            </div>                
+                {{/ukGrid}}
+            </div>
 
 		{{/inline}}
 	{{/ukContainer}}

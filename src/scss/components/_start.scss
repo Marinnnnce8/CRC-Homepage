@@ -1,4 +1,5 @@
-$marginTop: 60;
+$transitionDelay: 4;
+$svgTransitionDelay: $transitionDelay+1;
 
 .start {
     overflow-x: hidden;
@@ -7,7 +8,7 @@ $marginTop: 60;
         padding-bottom: 30px;
     }
 
-    &:not(.start-last) .uk-background-primary {
+    &.start-first .uk-background-primary {
         padding-bottom: 35px;
     }
 
@@ -25,7 +26,7 @@ $marginTop: 60;
             padding-bottom: 90px;
         }
 
-        &:not(.start-last) .uk-background-primary {
+        &.start-first .uk-background-primary {
             padding-bottom: 85px;
         }
 
@@ -35,9 +36,51 @@ $marginTop: 60;
     }
 
     @media (min-width: $breakpoint-medium-max) {
+        &.start-first {
+
+            .uk-background-primary {
+                overflow: hidden;
+            }
+
+            .uk-list {
+                padding: 208px 0 277px 100px;
+            }
+
+            svg {
+                bottom: 120px;
+            }
+
+            li {
+                transform: translateY(800%);
+            }
+
+            @for $i from 1 through $transitionDelay {
+                li:nth-of-type(#{$i}) {
+                    transition-delay: #{$i * .2s};
+                }
+
+                svg {
+                    transition-delay: #{$svgTransitionDelay * .2s};
+                }
+            }
+
+            &-animation {
+                .uk-background-cover {
+                    transform: translateY(0);
+                }
+
+                li,
+                svg {
+                    transform: translateY(0);
+                }
+            }
+        }
+
         &.start-last {
             img {
                 max-width: 417px;
+                transform: translateY(100%);
+                transition-delay: .5s;
             }
 
             .uk-background-primary {
@@ -47,58 +90,38 @@ $marginTop: 60;
                     bottom: 177px;
                 }
             }
-        }
 
-        &.start-first {
-            height: 200vh;
-
-            >.uk-flex {
-                height: 200vh;
-
-                >div {
-                    height: 100vh;
+            &-animation {
+                img {
+                    transform: translateY(0);
                 }
             }
-
-            // background-color: #2f60bb;
-
-            // .start-img-box {
-            //     height: 60vh;
-            //     background-color: #57bb2f;
-
-            //     // .uk-background-cover {
-            //     //     height: 60vh;
-            //     // }
-            // }
         }
 
         &-img {
             width: 44.88%;
-            // top: 100vh;
             position: relative;
+
+            .uk-background-cover {
+                position: absolute;
+                top: 0;
+                transform: translateY(100%);
+                left: 0;
+                transition: 1s ease;
+                transition-delay: .5s;
+            }
         }
 
-        &:not(.start-last) {
-            .uk-background-primary {
-                .uk-list {
-                    padding: 208px 0 277px 100px;
-                }
-
-                svg {
-                    bottom: 120px;
-                }
-            }
+        li,
+        svg,
+        img {
+            transition: .5s ease;
         }
 
         svg {
             position: absolute;
             left: 0;
-        }
-
-        @for $i from 1 through $marginTop {
-            li:nth-of-type(#{$i}):not(:last-of-type) {
-                margin-bottom: #{$marginTop + $i * 20}px;
-            }
+            transform: translateY(100%);
         }
     }
 
@@ -133,7 +156,7 @@ $marginTop: 60;
             font-size: 140px;
         }
 
-        &:not(.start-last) h2 {
+        &.start-first h2 {
             font-size: 100px;
         }
     }

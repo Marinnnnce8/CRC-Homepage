@@ -67,21 +67,19 @@
 		{{/ukContainer}}			
 	</div>
 
-	{{#each page.contexts}}
+	{{!-- {{#each page.contexts}}
 		{{#with this}}
 			{{> context}}
 		{{/with}}
-	{{/each}}
+	{{/each}} --}}
 	
-	{{!-- <div class="start start-first" id="startTarget">
+	<div class="start start-first uk-visible@l" id="startTarget" data-scroll data-scroll-class="start-first-animation">
 		<div class="uk-flex uk-flex-between uk-light">
-			<div class="start-img">
-				<div class="start-img-box">
-					<div class="uk-background-cover uk-width-1-1" data-uk-img style="background-image: url('../img/home-5.jpg');">alalalalala</div>
-				</div>
+			<div class="start-img uk-overflow-hidden">
+				<div class="uk-background-cover uk-width-1-1 uk-height-1-1" data-uk-img style="background-image: url('../img/home-5.jpg');"></div>
 			</div>
 			<div class="uk-background-primary uk-position-relative uk-width-expand uk-flex uk-flex-column uk-flex-left">
-				<ul class="uk-list uk-margin-remove-bottom" data-scroll data-scroll-sticky data-scroll-target="#startTarget">
+				<ul class="uk-list uk-margin-remove-bottom uk-position-relative">
 					<li><h2>Are you</h2></li>
 					<li><h2>ready to</h2></li>
 					<li><h2>get</h2></li>
@@ -90,7 +88,7 @@
 				{{>renderIcon name="arrow-right" viewBox="228 69"}}
 			</div>
 		</div>
-	</div> --}}
+	</div>
 
 	<div class="uk-flex uk-flex-between uk-light start uk-hidden@l">
 		<div class="uk-flex uk-flex-column uk-flex-right">
@@ -98,43 +96,36 @@
 		</div>
 		<div class="uk-background-primary uk-position-relative uk-width-expand uk-flex uk-flex-column uk-flex-right">
 			<ul class="uk-list uk-margin-remove-bottom">
-				<li><h2>Are you</h2></li>
-				<li><h2>ready to</h2></li>
-				<li><h2>get</h2></li>
-				<li><h2>started?</h2></li>
+				<li class="uk-position-relative"><h2>Are you</h2></li>
+				<li class="uk-position-relative"><h2>ready to</h2></li>
+				<li class="uk-position-relative"><h2>get</h2></li>
+				<li class="uk-position-relative"><h2>started?</h2></li>
 			</ul>
 			{{>renderIcon name="arrow-right" viewBox="228 69"}}
 		</div>
 	</div>
 
-	<div class="uk-position-relative testimonials uk-background-secondary">
+	<div class="uk-position-relative testimonials uk-background-secondary" data-scroll data-scroll-call="scroll">
 		{{> renderIcon name="testimonials" class="testimonials-icon" viewBox="1601 166"}}
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
-			<h2>See who<br> we’ve helped</h2>
+			<h2 class="testimonials-title" data-uk-sticky="media: @l">See who<br> we’ve helped</h2>
 			{{/inline}}
 		{{/ukContainer}}
-		<div id="testimonialsDirection">
-			<div class="testimonials-container" data-scroll data-scroll-sticky data-scroll-target="#testimonialsDirection">
-				{{#> ukContainer size=ukContainer}}
-					{{#*inline "out"}}
-						<div class="testimonials-bottom">
-							{{#> ukGrid class="uk-grid-small uk-flex uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-visible@l" dataScroll=true dataScrollDirection="horizontal" dataScrollTarget="testimonialsDirection" dataScrollSpeed="15"}}
-								{{#*inline "cells"}}
-
-								{{#each page.testimonials}}
-									{{#with this}}
-									<div>
-										{{> card}}
-									</div>
-									{{/with}}
-								{{/each}}
-
-								{{/inline}}
-							{{/ukGrid}}
-						</div>
-					{{/inline}}
-				{{/ukContainer}}
+		<span id="sticky-stop" class="testimonials-stop uk-visible@l" role="presentation"></span>
+		<div class="uk-visible@l uk-position-relative uk-width-1-1 testimonials-holder">
+			<div class="testimonials-sticky">
+				<div class="testimonials-inner">
+					<div class="testimonials-cards">
+						{{#each page.testimonials}}
+							{{#with this}}
+							<div>
+								{{> card}}
+							</div>
+							{{/with}}
+						{{/each}}
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="uk-hidden@l">
@@ -157,7 +148,7 @@
 		</div>
 	</div>
 
-	<div class="experience" id="experienceTarget">
+	{{!-- <div class="experience" id="experienceTarget">
 		<div data-scroll data-scroll-sticky data-scroll-target="#experienceTarget" class="uk-visible@l">
 			{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
 				{{#*inline "cells"}}
@@ -178,7 +169,7 @@
 					</div>
 				{{/inline}}
 			{{/ukGrid}}
-		</div>
+		</div> --}}
 
 		{{!--  <div class="values uk-visible@l">
 			{{#> ukGrid class="uk-grid-small uk-flex"}}
@@ -245,9 +236,9 @@
 				{{/inline}}
 			{{/ukContainer}}					
 		</div>
-	</div>
+	</div> --}}
 
-	<div class="uk-flex uk-flex-between uk-light start start-last uk-position-relative">
+	<div class="uk-flex uk-flex-between uk-light start start-last uk-position-relative" data-scroll data-scroll-class="start-last-animation">
 		<div class="uk-flex uk-flex-column uk-flex-left">
 			<img src="./img/home-7.jpg" loading="lazy" width="717" height="980" alt="image">
 		</div>
@@ -258,7 +249,7 @@
 			</ul>
 			{{>renderIcon name="arrow-right" viewBox="228 69"}}
 		</div>
-	</div> --}}
+	</div>
 
 
 	{{/inline}}

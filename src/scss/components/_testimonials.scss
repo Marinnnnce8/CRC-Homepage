@@ -35,23 +35,51 @@
     }
 
     @media (min-width: $breakpoint-medium-max) {
-        // padding: 230px 0 70px;
-        // height: 300vh;
+        width: 100%;
+        min-height: 85vh;
 
-        &-container {
-            padding-top: 15vh;
-            min-height: 85vh;
+        &-sticky {
+            position: sticky;
+            top: 320px;
+            height: 80vh;
+            overflow-x: hidden;
         }
 
-        &-bottom {
+        &-inner {
+            position: absolute;
+            height: 100%;
+            will-change: transform;
+            padding-left: 85vw;
+        }
+
+        &-cards {
+            position: relative;
+            height: 100%;
+            padding: 0 0 0 150px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+
             >div {
-                margin: 0 0 125px;
-                min-width: 1680px;
+                // margin: 0 0 125px;
+                width: 21.6vw;
             }
         }
 
         &-icon {
             top: 650px;
+        }
+
+        &-stop {
+            height: 1px;
+            position: absolute;
+            top: 68%;
+            display: block;
+            right: 0;
+            width: 1px;
+            background-color: transparent;
+            pointer-events: none;
         }
 
         .uk-slideshow-items li {

@@ -55,7 +55,9 @@
     }
 
     @media (min-width: $breakpoint-medium-max) {
-        padding: 0 0 80px;
+        // padding: 0 0 80px;
+        padding: 15vh 0;
+        min-height: 120vh;
 
         &-target {
             height: 440px;
