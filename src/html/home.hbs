@@ -67,11 +67,11 @@
 		{{/ukContainer}}			
 	</div>
 
-	{{!-- {{#each page.contexts}}
+	{{#each page.contexts}}
 		{{#with this}}
 			{{> context}}
 		{{/with}}
-	{{/each}} --}}
+	{{/each}}
 	
 	<div class="start start-first uk-visible@l" id="startTarget" data-scroll data-scroll-class="start-first-animation">
 		<div class="uk-flex uk-flex-between uk-light">
@@ -105,47 +105,33 @@
 		</div>
 	</div>
 
-	<div class="uk-position-relative testimonials uk-background-secondary" data-scroll data-scroll-call="scroll">
+	<div class="uk-position-relative testimonials uk-background-secondary" data-scroll data-scroll-class="testimonials-animation">
 		{{> renderIcon name="testimonials" class="testimonials-icon" viewBox="1601 166"}}
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
-			<h2 class="testimonials-title" data-uk-sticky="media: @l">See who<br> we’ve helped</h2>
+			<h2 class="testimonials-title">See who<br> we’ve helped</h2>
 			{{/inline}}
 		{{/ukContainer}}
-		<span id="sticky-stop" class="testimonials-stop uk-visible@l" role="presentation"></span>
-		<div class="uk-visible@l uk-position-relative uk-width-1-1 testimonials-holder">
-			<div class="testimonials-sticky">
-				<div class="testimonials-inner">
-					<div class="testimonials-cards">
-						{{#each page.testimonials}}
-							{{#with this}}
-							<div>
-								{{> card}}
-							</div>
-							{{/with}}
-						{{/each}}
+		{{#> ukContainer size="xlarge"}}
+			{{#*inline "out"}}			
+				<div data-uk-slider>
+					<div class="uk-position-relative uk-visible-toggle">
+						<ul class="uk-slider-items uk-child-width-1-4@l uk-grid">
+							{{#each page.testimonials}}
+								{{#with this}}
+								<li class="uk-flex uk-flex-center">
+									{{> card}}
+								</li>
+								{{/with}}
+							{{/each}}
+						</ul>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="uk-hidden@l">
-			<div data-uk-slider>
-				<div class="uk-position-relative uk-visible-toggle">
-					<ul class="uk-slider-items uk-child-width-1-1 uk-grid">
-						{{#each page.testimonials}}
-							{{#with this}}
-							<li class="uk-flex uk-flex-center">
-								{{> card}}
-							</li>
-							{{/with}}
-						{{/each}}
-					</ul>
-				</div>
 
-				<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+					<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
-			</div>
-		</div>
+				</div>
+			{{/inline}}
+		{{/ukContainer}}
 	</div>
 
 	{{!-- <div class="experience" id="experienceTarget">

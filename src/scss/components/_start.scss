@@ -36,12 +36,11 @@ $svgTransitionDelay: $transitionDelay+1;
     }
 
     @media (min-width: $breakpoint-medium-max) {
+        .uk-background-primary {
+            overflow: hidden;
+        }
+
         &.start-first {
-
-            .uk-background-primary {
-                overflow: hidden;
-            }
-
             .uk-list {
                 padding: 208px 0 277px 100px;
             }
@@ -77,6 +76,10 @@ $svgTransitionDelay: $transitionDelay+1;
         }
 
         &.start-last {
+            >.uk-flex-left {
+                overflow: hidden;
+            }
+
             img {
                 max-width: 417px;
                 transform: translateY(100%);

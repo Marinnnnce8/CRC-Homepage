@@ -10,42 +10,24 @@ var main = {
 	init: function() {
 
 		var horizontalContainer = document.getElementsByClassName('testimonials-cards')[0];
-		var isTablet = window.matchMedia("(max-width: 1200px)").matches;
-		if(!isTablet) {
-			var scroll = new LocomotiveScroll({
-				el: document.querySelector('[data-scroll-container]'),
-				smooth: true
-			});
-	
-			scroll.on('scroll', function() {
-				var spaceHolder = document.querySelector('.testimonials-holder');
-				var horizontal = document.querySelector('.testimonials-inner');
-				spaceHolder.style.height = calcDynamicHeight(horizontal) + 'px';
-	
-				function calcDynamicHeight(ref) {
-					var vw = window.innerWidth;
-					var vh = window.innerHeight;
-					var objectWidth = ref.scrollWidth;
-					return objectWidth - vw + vh + 150;
-				}
+		// var isTablet = window.matchMedia("(max-width: 1200px)").matches;
+		// if(!isTablet) {
+			
+		// 	var scroll = new LocomotiveScroll({
+		// 		el: document.querySelector('[data-scroll-container]'),
+		// 		smooth: true
+		// 	});
 
-				var horizontalTitle = document.querySelector('.testimonials-title');
-				var sticky = document.querySelector('.testimonials-sticky');
-				horizontal.style.transform = 'translateX(-' + sticky.offsetTop + 'px)';
-				console.log(sticky.offsetTop);
+		// 	scroll.on('scroll', function() {
+				
+		// 	});
+		// }
 
-				var dynamicHeight = calcDynamicHeight(horizontal);
-				if(sticky.offsetTop > dynamicHeight / 1.25){
-					horizontalTitle.setAttribute("data-uk-sticky", "bottom: #sticky-stop");
-				} else {
-					horizontalTitle.setAttribute("data-uk-sticky", "");
-				}
-			});
-		}
+		// if(horizontalContainer) {
+		// 	this.addMultiListener(window, 'load resize', main.horizontalScroll);
+		// }
 
-		if(horizontalContainer) {
-			this.addMultiListener(window, 'load resize', main.horizontalScroll);
-		}
+		main.toggleNavigation();
 
 		nb.profilerStart('main.init');
 
@@ -235,20 +217,18 @@ var main = {
 	// 			var objectWidth = ref.scrollWidth;
 	// 			return objectWidth - vw + vh + 150;
 	// 		}
+			
+	// 		var horizontalTitle = document.querySelector('.testimonials-title');
+	// 		var sticky = document.querySelector('.testimonials-sticky');
+	// 		horizontal.style.transform = 'translateX(-' + sticky.offsetTop + 'px)';
+	// 		console.log(sticky.offsetTop);
 
-	// 		scroll.on('scroll', function() {
-	// 			var horizontalTitle = document.querySelector('.testimonials-title');
-	// 			var sticky = document.querySelector('.testimonials-sticky');
-	// 			horizontal.style.transform = 'translateX(-' + sticky.offsetTop + 'px)';
-	// 			console.log(sticky.offsetTop);
-
-	// 			var dynamicHeight = calcDynamicHeight(horizontal);
-	// 			if(sticky.offsetTop > dynamicHeight / 1.25){
-	// 				horizontalTitle.setAttribute("data-uk-sticky", "bottom: #sticky-stop");
-	// 			} else {
-	// 				horizontalTitle.setAttribute("data-uk-sticky", "");
-	// 			}
-	// 		});
+	// 		var dynamicHeight = calcDynamicHeight(horizontal);
+	// 		if(sticky.offsetTop > dynamicHeight / 1.25){
+	// 			horizontalTitle.setAttribute("data-uk-sticky", "bottom: #sticky-stop");
+	// 		} else {
+	// 			horizontalTitle.setAttribute("data-uk-sticky", "");
+	// 		}
 
 	// 		window.addEventListener('resize', function () {
 	// 			var isDesktop = window.matchMedia("(min-width: 1200px)").matches;

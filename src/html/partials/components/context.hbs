@@ -1,35 +1,33 @@
 {{#with context}}
-<div class="context{{#if secondary}} uk-background-secondary{{/if}}" data-scroll>
+<div class="context{{#if secondary}} uk-background-secondary{{/if}}">
 	{{#> ukContainer size=ukContainer}}
 		{{#*inline "out"}}
 
             {{#if title}}<h2>{{{title}}}</h2>{{/if}}
             <div class="uk-position-relative">
-                <div id="contextTarget{{@index}}" class="context-stop uk-width-1-1 uk-position-center-top"></div>
-                {{#> ukGrid class="uk-grid-xlarge uk-child-width-1-2@l context-wrap"}}
+                {{#> ukGrid class="uk-grid-xlarge uk-child-width-1-2@l"}}
                     {{#*inline "cells"}}
-                        <div class="uk-visible@l context-target" data-scroll data-scroll-speed="5" data-scroll-sticky data-scroll-target="#contextTarget{{@index}}">
-                            <div class="uk-flex-inline number" data-scroll data-scroll-speed="5" data-scroll-delay="1" >
+                        <div class="uk-visible@l">
+                            <div class="uk-flex-inline number" data-scroll data-scroll-class="animation-slide-bottom">
                                 {{numberOne}}
                             </div>
-                            <div class="uk-flex-inline number" data-scroll data-scroll-speed="3" data-scroll-delay="0.1">
+                            <div class="uk-flex-inline number" data-scroll data-scroll-class="animation-slide-bottom">
                                 {{numberTwo}}
                             </div>
                         </div>
 
-                        {{!-- <div class="number-wrap uk-hidden@l{{#if secondary}} uk-position-left-top{{else}} uk-position-right-top{{/if}}">
+                        <div class="number-wrap uk-hidden@l{{#if secondary}} uk-position-left-top{{else}} uk-position-right-top{{/if}}">
                             <span class="number">{{numberOne}}</span>
                             <span class="number">{{numberTwo}}</span>
-                        </div> --}}
-                        <div >
-                            <div class="context-text" data-scroll data-scroll-speed="5">
-                                <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
-                                {{#each paragraph}}
-                                    {{#with this}}
-                                        <p>{{text}}</p>
-                                    {{/with}}
-                                {{/each}}
-                            </div>
+                        </div>
+
+                        <div class="context-text" data-scroll data-scroll-class="animation-slide-bottom">
+                            <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
+                            {{#each paragraph}}
+                                {{#with this}}
+                                    <p>{{text}}</p>
+                                {{/with}}
+                            {{/each}}
                         </div>
                     {{/inline}}
                 {{/ukGrid}}

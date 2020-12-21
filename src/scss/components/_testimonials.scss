@@ -1,3 +1,5 @@
+$testimonialsDelay: 4;
+
 .testimonials {
     padding: 115px 0 20px;
 
@@ -10,16 +12,6 @@
         position: absolute;
         top: 257px;
         transform: translateY(-50%);
-    }
-
-    .uk-slideshow-items li {
-        min-height: 460px;
-    }
-
-    .uk-card>div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .uk-card-media-top {
@@ -35,55 +27,36 @@
     }
 
     @media (min-width: $breakpoint-medium-max) {
-        width: 100%;
-        min-height: 85vh;
+        padding: 230px 0 70px;
 
-        &-sticky {
-            position: sticky;
-            top: 320px;
-            height: 80vh;
-            overflow-x: hidden;
-        }
-
-        &-inner {
-            position: absolute;
-            height: 100%;
-            will-change: transform;
-            padding-left: 85vw;
-        }
-
-        &-cards {
-            position: relative;
-            height: 100%;
-            padding: 0 0 0 150px;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-
-            >div {
-                // margin: 0 0 125px;
-                width: 21.6vw;
+        &.testimonials-animation {
+            @for $i from 1 through $testimonialsDelay {
+                .uk-slider-items li:nth-of-type(#{$i}) {
+                    transition-delay: #{$i * .2s};
+                    opacity: 1;
+                }
             }
         }
 
+        .uk-grid {
+            margin-left: -5px;
+
+            >* {
+                padding-left: 5px;
+            }
+        }
+
+        .uk-slider-items li {
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+        h2 {
+            padding-bottom: 45px;
+        }
+
         &-icon {
-            top: 650px;
-        }
-
-        &-stop {
-            height: 1px;
-            position: absolute;
-            top: 68%;
-            display: block;
-            right: 0;
-            width: 1px;
-            background-color: transparent;
-            pointer-events: none;
-        }
-
-        .uk-slideshow-items li {
-            min-height: 677px;
+            top: 780px;
         }
     }
 
