@@ -1,6 +1,4 @@
 .experience {
-    overflow: hidden;
-    min-height: 120vh;
     padding: 120px 0 60px;
 
     @media (min-width: $breakpoint-xsmall-max) {
@@ -10,21 +8,9 @@
     @media (min-width: $breakpoint-medium-max) {
         padding: 225px 0 150px;
 
-        &-image {
-            height: 800px;
-            overflow-y: hidden;
-            position: relative;
-
-            .uk-flex {
-                position: absolute;
-                left: 0;
-                width: 100%;
-                top: 800px;
-            }
-        }
-
         h2 {
-            margin-bottom: 83px;
+            margin-bottom: 45px;
+            font-size: 3.583rem;
         }
     }
 

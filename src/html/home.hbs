@@ -134,19 +134,18 @@
 		{{/ukContainer}}
 	</div>
 
-	{{!-- <div class="experience" id="experienceTarget">
-		<div data-scroll data-scroll-sticky data-scroll-target="#experienceTarget" class="uk-visible@l">
+	<div class="experience uk-position-relative" id="experienceTarget">
+		<div class="uk-visible@l">
 			{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
 				{{#*inline "cells"}}
 					<div data-scroll data-scroll-speed="5" class="experience-image">
-						<div class="uk-flex uk-flex-column">
-							<img src="./img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
-							<img src="./img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
-							<img src="./img/home-6.jpg" loading="lazy" width="613" height="799" alt="image">
+						<div class="c-fixed_wrapper uk-position-relative uk-overflow-hidden uk-background-default" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
+							<div class="c-fixed_target" id="experienceImgTarget"></div>
+							<div class="c-fixed" data-uk-img data-scroll data-scroll-sticky data-scroll-target="#experienceImgTarget" style="background-image: url('./img/home-6.jpg');"></div>
 						</div>
 					</div>
-					<div data-scroll data-scroll-speed="1">
-						<div class="uk-width-4-5">
+					<div class="uk-position-relative" data-scroll data-scroll-speed="1" data-scroll data-scroll-sticky data-scroll-target="#experienceTarget">
+						<div class="uk-width-4-5" data-scroll data-scroll-offset="200">
 							<h2 class="uk-text-large">Your experience working with CRC</h2>
 							<p>Our focus is on building a relationship with you and your business.</p>
 							<p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
@@ -155,25 +154,9 @@
 					</div>
 				{{/inline}}
 			{{/ukGrid}}
-		</div> --}}
-
-		{{!--  <div class="values uk-visible@l">
-			{{#> ukGrid class="uk-grid-small uk-flex"}}
-				{{#*inline "cells"}}
-
-				{{#each page.values}}
-					{{#with this}}
-					<div>
-						{{> value}}
-					</div>
-					{{/with}}
-				{{/each}}
-
-				{{/inline}}
-			{{/ukGrid}}
 		</div>
 
-		{{#> ukContainer size=ukContainer}}
+		{{#> ukContainer size=ukContainer class="uk-hidden@l"}}
 			{{#*inline "out"}}
 				<h2>Your experience working with CRC</h2>
 				{{#> ukGrid class="uk-grid-large uk-flex uk-child-width-1-2@s" dataUkGrid="masonry: true"}}
@@ -222,7 +205,30 @@
 				{{/inline}}
 			{{/ukContainer}}					
 		</div>
-	</div> --}}
+	</div>
+
+	<div class="values uk-visible@l" id="valuesDirection">
+		<div data-scroll data-scroll-direction="horizontal" data-scroll-target="#valuesDirection" data-scroll-speed="-40">
+			<div class="uk-flex uk-flex-middle">
+				<div class="uk-margin-medium-right">
+					<p class="uk-text-lead">Value your time, because we do.</p>
+				</div>				
+				{{#> ukGrid class="uk-grid-small uk-flex"}}
+					{{#*inline "cells"}}
+
+					{{#each page.values}}
+						{{#with this}}
+						<div>
+							{{> value}}
+						</div>
+						{{/with}}
+					{{/each}}
+
+					{{/inline}}
+				{{/ukGrid}}
+			</div>
+		</div>
+	</div>	
 
 	<div class="uk-flex uk-flex-between uk-light start start-last uk-position-relative" data-scroll data-scroll-class="start-last-animation">
 		<div class="uk-flex uk-flex-column uk-flex-left">

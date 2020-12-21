@@ -26,6 +26,10 @@
         margin-bottom: 100px;
     }
 
+    .uk-text-lead {
+        font-size: 24px;
+    }
+
     @media (min-width: $breakpoint-xsmall-max) {
 
         .uk-grid-column-small,
@@ -51,6 +55,10 @@
         }
     }
 
+    @media (min-width: $breakpoint-medium-max) {
+        padding-bottom: 150px;
+    }
+
     @media (max-width: $breakpoint-large) {
         .uk-slider-items {
             margin-bottom: 35px;
@@ -60,10 +68,6 @@
     @media (max-width: $breakpoint-small) {
         img {
             width: 40px;
-        }
-
-        .uk-text-lead {
-            font-size: 24px;
         }
     }
 }
