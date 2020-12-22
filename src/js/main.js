@@ -9,23 +9,10 @@ var main = {
 
 	init: function() {
 
-		var horizontalContainer = document.getElementsByClassName('testimonials-cards')[0];
-		// var isTablet = window.matchMedia("(max-width: 1200px)").matches;
-		// if(!isTablet) {
-			
-		// 	var scroll = new LocomotiveScroll({
-		// 		el: document.querySelector('[data-scroll-container]'),
-		// 		smooth: true
-		// 	});
-
-		// 	scroll.on('scroll', function() {
-				
-		// 	});
-		// }
-
-		// if(horizontalContainer) {
-		// 	this.addMultiListener(window, 'load resize', main.horizontalScroll);
-		// }
+		var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
+		if(isDesktop) {
+			main.locomotiveInit();
+		}
 
 		main.toggleNavigation();
 
@@ -199,48 +186,66 @@ var main = {
 		});
 	},
 
-	// horizontalScroll: function() {
-	// 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-	// 	if(isIE11) {
-	// 		return;
-	// 	}
-	// 	var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
-	// 	var spaceHolder = document.querySelector('.testimonials-holder');
+	locomotiveInit: function() {
+		document.documentElement.classList.add('is-loaded');
+		document.documentElement.classList.remove('is-loading');
 
-	// 	if (isDesktop) {
-	// 		var horizontal = document.querySelector('.testimonials-inner');
-	// 		spaceHolder.style.height = calcDynamicHeight(horizontal) + 'px';
+		setTimeout(() => {
+			document.documentElement.classList.add('is-ready');
+		},300)
 
-	// 		function calcDynamicHeight(ref) {
-	// 			var vw = window.innerWidth;
-	// 			var vh = window.innerHeight;
-	// 			var objectWidth = ref.scrollWidth;
-	// 			return objectWidth - vw + vh + 150;
-	// 		}
-			
-	// 		var horizontalTitle = document.querySelector('.testimonials-title');
-	// 		var sticky = document.querySelector('.testimonials-sticky');
-	// 		horizontal.style.transform = 'translateX(-' + sticky.offsetTop + 'px)';
-	// 		console.log(sticky.offsetTop);
+		let options = {
+			el: document.querySelector('#js-scroll'),
+			smooth: true,
+			getSpeed: true,
+			getDirection: true
+		}
 
-	// 		var dynamicHeight = calcDynamicHeight(horizontal);
-	// 		if(sticky.offsetTop > dynamicHeight / 1.25){
-	// 			horizontalTitle.setAttribute("data-uk-sticky", "bottom: #sticky-stop");
-	// 		} else {
-	// 			horizontalTitle.setAttribute("data-uk-sticky", "");
-	// 		}
+		if(document.querySelector('#js-scroll').getAttribute('data-horizontal') == 'true') {
+			options.direction = 'horizontal';
+			options.gestureDirection = 'both';
+			options = {
+				smooth: true,
+				direction: 'horizontal',
+				horizontalGesture: true
+			}
+			options.reloadOnContextChange = true
+		}
 
-	// 		window.addEventListener('resize', function () {
-	// 			var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
-	// 			if (isDesktop) {
-	// 				spaceHolder.style.height = calcDynamicHeight(horizontal) + 'px';
-	// 			}
-	// 		});
-	// 	} else {
-	// 		spaceHolder.style.height = 0;
-	// 		spaceHolder.style.height = 100 + "%";
-	// 	}
-	// }
+		setTimeout(() => {
+			const scroll = new LocomotiveScroll(options);
+
+			let dynamicBackgrounds = [];
+
+			scroll.on('scroll', (instance) => {
+				const progress = 360 * instance.scroll.y / instance.limit;
+
+				dynamicBackgrounds.forEach(obj => {
+					obj.el.style.backgroundColor = `hsl(${progress}, 11%, 81%)`;
+				});
+
+				document.documentElement.setAttribute('data-direction', instance.direction)
+			});
+
+			scroll.on('call', (value, way, obj) => {
+				if (value === 'dynamicBackground') {
+					if(way === 'enter') {
+						dynamicBackgrounds.push({
+							id: obj.id,
+							el: obj.el
+						});
+					} else {
+						for (var i = 0; i < dynamicBackgrounds.length; i++) {
+							if(obj.id === dynamicBackgrounds[i].id) {
+								dynamicBackgrounds.splice(i,1);
+							}
+						}
+					}
+				}
+			});
+
+		}, 1000)
+	}
 };
 
 uk.ready(function() {

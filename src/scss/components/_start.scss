@@ -29,6 +29,16 @@ $svgTransitionDelay: $transitionDelay+1;
             overflow: hidden;
         }
 
+        .uk-background-cover {
+            transition: 1s ease;
+        }
+
+        &-animation {
+            .uk-background-cover {
+                transform: translateY(0);
+            }
+        }
+
         &.start-first {
             .uk-list {
                 padding: 208px 0 277px 100px;
@@ -66,13 +76,15 @@ $svgTransitionDelay: $transitionDelay+1;
 
         &.start-last {
             >.uk-flex-left {
+                width: 100%;
                 overflow: hidden;
+                max-width: 417px;
             }
 
-            img {
-                max-width: 417px;
+            .uk-background-cover {
                 transform: translateY(100%);
                 transition-delay: .5s;
+                height: 427px;
             }
 
             .uk-background-primary {
@@ -84,7 +96,7 @@ $svgTransitionDelay: $transitionDelay+1;
             }
 
             &-animation {
-                img {
+                .uk-background-cover {
                     transform: translateY(0);
                 }
             }
@@ -99,7 +111,6 @@ $svgTransitionDelay: $transitionDelay+1;
                 top: 0;
                 transform: translateY(100%);
                 left: 0;
-                transition: 1s ease;
                 transition-delay: .5s;
             }
         }
@@ -120,13 +131,13 @@ $svgTransitionDelay: $transitionDelay+1;
 
     @media (min-width: $breakpoint-large-max) {
         &.start-last {
-            img {
+            >.uk-flex-left {
                 max-width: 617px;
             }
         }
     }
 
-    @media (max-width: $breakpoint-large) {
+    @media (max-width: $breakpoint-medium-max) {
         flex-direction: column;
 
         .uk-list {
