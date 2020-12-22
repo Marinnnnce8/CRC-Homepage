@@ -37,9 +37,7 @@
 				</div>
 			{{/inline}}
 		{{/ukContainer}}
-		<div class="uk-flex images-left images-target uk-background-cover" data-uk-img style="background-image: url(./img/home-4.jpg);" data-scroll data-scroll-speed="2">
-			{{!-- <img src="./img/home-4.jpg" loading="lazy" width="376" height="618" alt="image" data-scroll data-scroll-speed="2"> --}}
-		</div>
+		<div class="uk-flex images-left images-target uk-background-cover" data-uk-img style="background-image: url(./img/home-4.jpg);" data-scroll data-scroll-speed="2" role="presentation"></div>
 	</div>
 
 	<div class="uk-hidden@l about">
@@ -105,33 +103,35 @@
 		</div>
 	</div>
 
-	<div class="uk-position-relative testimonials uk-background-secondary" data-scroll data-scroll-class="testimonials-animation">
+	<div class="uk-position-relative testimonials uk-background-secondary">
 		{{> renderIcon name="testimonials" class="testimonials-icon" viewBox="1601 166"}}
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
 			<h2 class="testimonials-title">See who<br> we’ve helped</h2>
 			{{/inline}}
 		{{/ukContainer}}
-		{{#> ukContainer size="xlarge"}}
-			{{#*inline "out"}}			
-				<div data-uk-slider>
-					<div class="uk-position-relative uk-visible-toggle">
-						<ul class="uk-slider-items uk-child-width-1-4@l uk-grid">
-							{{#each page.testimonials}}
-								{{#with this}}
-								<li class="uk-flex uk-flex-center">
-									{{> card}}
-								</li>
-								{{/with}}
-							{{/each}}
-						</ul>
+		<div data-scroll data-scroll-class="testimonials-animation">
+			{{#> ukContainer size="xlarge"}}
+				{{#*inline "out"}}			
+					<div data-uk-slider>
+						<div class="uk-position-relative uk-visible-toggle">
+							<ul class="uk-slider-items uk-child-width-1-4@l uk-grid">
+								{{#each page.testimonials}}
+									{{#with this}}
+									<li class="uk-flex uk-flex-center">
+										{{> card}}
+									</li>
+									{{/with}}
+								{{/each}}
+							</ul>
+						</div>
+
+						<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
 					</div>
-
-					<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
-				</div>
-			{{/inline}}
-		{{/ukContainer}}
+				{{/inline}}
+			{{/ukContainer}}
+		</div>
 	</div>
 
 	<div class="experience uk-position-relative" id="experienceTarget">

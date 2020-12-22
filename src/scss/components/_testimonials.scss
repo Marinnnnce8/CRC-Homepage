@@ -29,7 +29,7 @@ $testimonialsDelay: 4;
     @media (min-width: $breakpoint-large) {
         padding: 230px 0 70px;
 
-        &.testimonials-animation {
+        .testimonials-animation {
             @for $i from 1 through $testimonialsDelay {
                 .uk-slider-items li:nth-of-type(#{$i}) {
                     transition-delay: #{$i * .2s};

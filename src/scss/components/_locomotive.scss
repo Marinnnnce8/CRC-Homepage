@@ -1,3 +1,8 @@
+html:not(.has-scroll-init) {
+  cursor: wait;
+  overflow: hidden;
+}
+
 html.has-scroll-smooth {
   overflow: hidden;
 }
