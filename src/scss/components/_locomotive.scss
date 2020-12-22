@@ -99,7 +99,9 @@ html.has-scroll-dragging {
 }
 
 .o-scroll {
-	overflow: hidden;
+	@media (min-width: $breakpoint-large) {
+		overflow: hidden;
+	}
 }
 
 .c-fixed {
