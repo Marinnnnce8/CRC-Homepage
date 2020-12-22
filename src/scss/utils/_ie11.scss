@@ -1,3 +1,36 @@
-/*@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+    .banner {
+        .banner-title h1 {
+            width: 100%;
 
-}*/
+            span {
+                opacity: 1;
+
+                &:last-child {
+                    display: inline;
+                }
+            }
+        }
+
+        &-bottom {
+            display: none;
+        }
+    }
+
+    .context .number,
+    .context-text {
+        transform: none;
+        opacity: 1;
+    }
+
+    .start-img .uk-background-cover,
+    .start.start-first li,
+    .start.start-last img {
+        transform: translateY(0);
+    }
+
+    .testimonials .uk-slider-items li {
+        opacity: 1;
+    }
+}

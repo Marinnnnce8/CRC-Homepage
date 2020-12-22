@@ -5,6 +5,10 @@
 		margin: 0 0 85px;
 	}
 
+	h1 span:last-child {
+		display: none;
+	}
+
 	img {
 		max-width: calc(100vw - 20px);
 		width: calc(100vw - 20px);

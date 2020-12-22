@@ -3,7 +3,7 @@ $testimonialsDelay: 4;
 .testimonials {
     padding: 115px 0 20px;
 
-    h2 {
+    .uk-container .testimonials-title {
         margin-bottom: 48px;
     }
 
@@ -26,7 +26,7 @@ $testimonialsDelay: 4;
         }
     }
 
-    @media (min-width: $breakpoint-medium-max) {
+    @media (min-width: $breakpoint-large) {
         padding: 230px 0 70px;
 
         &.testimonials-animation {
@@ -67,7 +67,7 @@ $testimonialsDelay: 4;
     }
 
     @media (max-width: $breakpoint-large) and (min-width: $breakpoint-xsmall-max) {
-        h2 {
+        .uk-container .testimonials-title {
             margin-bottom: 165px;
         }
     }

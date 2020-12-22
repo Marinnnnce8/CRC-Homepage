@@ -55,8 +55,12 @@
         }
     }
 
-    @media (min-width: $breakpoint-medium-max) {
+    @media (min-width: $breakpoint-large) {
         padding-bottom: 150px;
+
+        >div>.uk-flex-middle {
+            min-width: 1700px;
+        }
     }
 
     @media (max-width: $breakpoint-large) {

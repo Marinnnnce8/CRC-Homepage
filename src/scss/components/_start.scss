@@ -4,14 +4,6 @@ $svgTransitionDelay: $transitionDelay+1;
 .start {
     overflow-x: hidden;
 
-    &.start-last .uk-background-primary {
-        padding-bottom: 30px;
-    }
-
-    &.start-first .uk-background-primary {
-        padding-bottom: 35px;
-    }
-
     img {
         max-width: calc(100vw - 20px);
     }
@@ -23,14 +15,6 @@ $svgTransitionDelay: $transitionDelay+1;
     }
 
     @media (min-width: $breakpoint-xsmall-max) {
-        &.start-last .uk-background-primary {
-            padding-bottom: 90px;
-        }
-
-        &.start-first .uk-background-primary {
-            padding-bottom: 85px;
-        }
-
         img {
             max-width: calc(100vw - 60px);
         }
