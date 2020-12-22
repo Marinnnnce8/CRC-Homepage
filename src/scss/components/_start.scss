@@ -13,11 +13,12 @@ $svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-o
         height: 69px;
         margin-bottom: 35px;
         transition: $transition;
+        position: relative;
     }
 
     @include hover {
         svg {
-            transform: translate(15%, 100%);
+            transform: translateX(15%);
         }
     }
 
@@ -128,6 +129,12 @@ $svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-o
             left: 0;
             transform: translateY(100%);
             margin-bottom: 0;
+        }
+
+        @include hover {
+            svg {
+                transform: translate(15%, 100%);
+            }
         }
     }
 
