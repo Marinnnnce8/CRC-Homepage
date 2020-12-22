@@ -108,9 +108,9 @@
 	<script src="./js/main.js"></script>
 
 	<script>
-		var isTablet = window.matchMedia("(max-width: 1200px)").matches;
+		var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
 		
-		if(!isTablet) {
+		if(isDesktop) {
 			(function() {
 
 				document.documentElement.classList.add('is-loaded');

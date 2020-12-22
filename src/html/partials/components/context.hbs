@@ -7,7 +7,7 @@
             <div class="uk-position-relative">
                 {{#> ukGrid class="uk-grid-xlarge uk-child-width-1-2@l"}}
                     {{#*inline "cells"}}
-                        <div class="uk-visible@l">
+                        <div class="uk-visible@s number-wrap">
                             <div class="uk-flex-inline number" data-scroll data-scroll-class="animation-slide-bottom">
                                 {{numberOne}}
                             </div>
@@ -16,13 +16,31 @@
                             </div>
                         </div>
 
-                        <div class="number-wrap uk-hidden@l{{#if secondary}} uk-position-left-top{{else}} uk-position-right-top{{/if}}">
-                            <span class="number">{{numberOne}}</span>
-                            <span class="number">{{numberTwo}}</span>
-                        </div>
-
                         <div class="context-text" data-scroll data-scroll-class="animation-slide-bottom">
-                            <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
+                            {{#> ukGrid class="uk-hidden@s uk-flex-middle uk-child-width-1-2"}}
+                                {{#*inline "cells"}}
+                                {{#if secondary}}
+                                    <div>
+                                        <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
+                                    </div>                                
+                                    <div class="number-wrap">
+                                        <span class="number">{{numberOne}}</span>
+                                        <span class="number">{{numberTwo}}</span>
+                                    </div>
+                                {{else}}                               
+                                    <div class="number-wrap">
+                                        <span class="number">{{numberOne}}</span>
+                                        <span class="number">{{numberTwo}}</span>
+                                    </div>                               
+                                    <div>
+                                        <h3 class="uk-text-uppercase"><span>{{subTitle}}</span></h3>
+                                    </div>                                    
+                                {{/if}}
+
+
+                                {{/inline}}
+                            {{/ukGrid}}
+                            <h3 class="uk-text-uppercase uk-visible@s"><span>{{subTitle}}</span></h3>
                             {{#each paragraph}}
                                 {{#with this}}
                                     <p>{{text}}</p>
