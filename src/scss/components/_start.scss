@@ -1,5 +1,5 @@
 $transitionDelay: 4;
-$svgTransitionDelay: $transitionDelay+1;
+$svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-operator
 
 .start {
     overflow-x: hidden;
@@ -12,6 +12,13 @@ $svgTransitionDelay: $transitionDelay+1;
         width: 227px;
         height: 69px;
         margin-bottom: 35px;
+        transition: $transition;
+    }
+
+    @include hover {
+        svg {
+            transform: translate(15%, 100%);
+        }
     }
 
     @media (min-width: $breakpoint-xsmall-max) {
@@ -56,10 +63,6 @@ $svgTransitionDelay: $transitionDelay+1;
                 li:nth-of-type(#{$i}) {
                     transition-delay: #{$i * .2s};
                 }
-
-                svg {
-                    transition-delay: #{$svgTransitionDelay * .2s};
-                }
             }
 
             &-animation {
@@ -67,8 +70,7 @@ $svgTransitionDelay: $transitionDelay+1;
                     transform: translateY(0);
                 }
 
-                li,
-                svg {
+                li {
                     transform: translateY(0);
                 }
             }
