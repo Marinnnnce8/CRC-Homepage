@@ -115,7 +115,6 @@ html.has-scroll-dragging {
 .c-fixed,
 .c-fixed_target {
 	position: absolute;
-	// top: -100vh;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -130,8 +129,3 @@ html.has-scroll-dragging {
 		height: 100vh;
 	}
 }
-
-// .c-fixed_wrapper {
-//   position: relative;
-//   overflow: hidden;
-// }

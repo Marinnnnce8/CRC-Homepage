@@ -1,6 +1,4 @@
 .images {
-
-
     @media (min-width: $breakpoint-medium) {
         padding-top: 22vh;
 
@@ -26,9 +24,6 @@
         }
 
         &-left {
-            // position: absolute;
-            // left: 0;
-            // bottom: 0;
             margin-top: 35vh;
             height: 475px;
             width: calc(50vw + 20px);
