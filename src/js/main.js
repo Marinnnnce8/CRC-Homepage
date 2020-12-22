@@ -8,10 +8,15 @@
 var main = {
 
 	init: function() {
+		
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
 		if(isDesktop && !isIE11) {
 			main.locomotiveInit();
+		}
+
+		if(!isDesktop) {
+			main.removeLogoOnScroll();
 		}
 
 		main.toggleNavigation();
@@ -161,6 +166,22 @@ var main = {
 		}
 	},
 
+	removeLogoOnScroll: function() {
+		var header = document.querySelector('.header');
+		header.addEventListener('scroll', function(e) {
+			var header = document.querySelector('.header');
+			if(header.classList.contains('nav-open')) {
+				var navLogo = document.querySelector('.uk-logo');
+				console.log(e.target.scrollTop);
+				if (e.target.scrollTop > 20) {
+					navLogo.style.transform = "translateY(100%)";
+				} else {
+					navLogo.style.transform = "none";
+				}
+			}
+		}, true);
+	},
+
 	//nav toggle
 	toggleNavigation: function() {
 		var navToggleButton = document.querySelector('.nb-navbar-toggle');
@@ -182,6 +203,19 @@ var main = {
 				nav.removeAttribute('hidden');
 				nav.setAttribute('aria-hidden', 'false');
 				navIcon.removeAttribute('hidden');
+
+				// if(header.classList.contains('nav-open')) {
+					// window.onscroll = function() {
+					// 	console.log('usao');
+					// 	var navLogo = document.querySelector('.uk-logo');
+					// 	if ((window.innerHeight + window.scrollY) >= 1) {
+					// 		alert("you're at the bottom of the page");
+					// 		navLogo.style.opacity = 0;
+					// 	} else {
+					// 		navLogo.style.opacity = 1;
+					// 	}
+					// };
+				// }
 			}
 		});
 	},
