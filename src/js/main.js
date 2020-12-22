@@ -166,13 +166,12 @@ var main = {
 		}
 	},
 
+	//toggle menu logo on scroll
 	removeLogoOnScroll: function() {
 		var header = document.querySelector('.header');
 		header.addEventListener('scroll', function(e) {
-			var header = document.querySelector('.header');
-			if(header.classList.contains('nav-open')) {
+			if(this.classList.contains('nav-open')) {
 				var navLogo = document.querySelector('.uk-logo');
-				console.log(e.target.scrollTop);
 				if (e.target.scrollTop > 20) {
 					navLogo.style.transform = "translateY(100%)";
 				} else {
@@ -203,19 +202,6 @@ var main = {
 				nav.removeAttribute('hidden');
 				nav.setAttribute('aria-hidden', 'false');
 				navIcon.removeAttribute('hidden');
-
-				// if(header.classList.contains('nav-open')) {
-					// window.onscroll = function() {
-					// 	console.log('usao');
-					// 	var navLogo = document.querySelector('.uk-logo');
-					// 	if ((window.innerHeight + window.scrollY) >= 1) {
-					// 		alert("you're at the bottom of the page");
-					// 		navLogo.style.opacity = 0;
-					// 	} else {
-					// 		navLogo.style.opacity = 1;
-					// 	}
-					// };
-				// }
 			}
 		});
 	},
