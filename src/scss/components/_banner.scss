@@ -36,7 +36,7 @@
 		}
 	}
 
-	@media (min-width: $breakpoint-medium-max) {
+	@media (min-width: $breakpoint-large) {
 		.banner-title {
 			z-index: 1;
 			position: relative;
@@ -63,13 +63,8 @@
 			position: absolute;
 		}
 
-		&-bottom {
-			// padding: 420px 0 218px;
-			// padding: 0 0 218px;
-
-			h1 {
-				min-width: 120vw;
-			}
+		&-bottom h1 {
+			min-width: 120vw;
 		}
 
 		.uk-overlay {
