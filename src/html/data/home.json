@@ -37,42 +37,49 @@
 	],
 	"values": [
 		{
+			"url": "https://www.loom.com/",
 			"src": ".\/img\/loom-logo.png",
 			"alt": "Loom",
 			"width": "90",
 			"height": "90"
 		},
 		{
+			"url": "https://gocardless.com/",
 			"src": ".\/img\/GoCardless-logo.png",
 			"alt": "GoCardless",
 			"width": "90",
 			"height": "48"
 		},
 		{
+			"url": "https://www.spotlightreporting.com/",
 			"src": ".\/img\/Spotlight-Reporting-logo.png",
 			"alt": "Spotlight Reporting",
 			"width": "80",
 			"height": "83"
 		},
 		{
+			"url": "https://app.receipt-bank.com/login",
 			"src": ".\/img\/ReceiptBank-logo.png",
 			"alt": "Receipt Bank",
 			"width": "80",
 			"height": "83"
 		},
 		{
+			"url": "https://zoom.us/",
 			"src": ".\/img\/zoom-logo.png",
 			"alt": "Zoom",
 			"width": "90",
 			"height": "85"
 		},
 		{
+			"url": "https://login.xero.com/",
 			"src": ".\/img\/xero-logo.png",
 			"alt": "Xero",
 			"width": "100",
 			"height": "29"
 		},
 		{
+			"url": "https://c34.qbo.intuit.com/qbo34/login?locale=en_GB",
 			"src": ".\/img\/Quickbooks-logo.png",
 			"alt": "Quickbooks",
 			"width": "90",

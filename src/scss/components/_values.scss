@@ -20,6 +20,10 @@
     .value {
         width: 80px;
         height: 80px;
+        transition: $transition;
+        @include hover {
+            background-color: $warning;
+        }
     }
 
     .uk-slider-nav {
