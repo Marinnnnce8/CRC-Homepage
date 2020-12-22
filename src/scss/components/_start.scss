@@ -19,6 +19,7 @@ $svgTransitionDelay: $transitionDelay+1;
     svg {
         width: 227px;
         height: 69px;
+        margin-bottom: 35px;
     }
 
     @media (min-width: $breakpoint-xsmall-max) {
@@ -33,9 +34,13 @@ $svgTransitionDelay: $transitionDelay+1;
         img {
             max-width: calc(100vw - 60px);
         }
+
+        svg {
+            margin-bottom: 85px;
+        }
     }
 
-    @media (min-width: $breakpoint-medium-max) {
+    @media (min-width: $breakpoint-large) {
         .uk-background-primary {
             overflow: hidden;
         }
@@ -125,6 +130,7 @@ $svgTransitionDelay: $transitionDelay+1;
             position: absolute;
             left: 0;
             transform: translateY(100%);
+            margin-bottom: 0;
         }
     }
 

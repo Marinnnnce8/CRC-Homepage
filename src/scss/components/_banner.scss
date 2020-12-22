@@ -10,7 +10,7 @@
 		width: calc(100vw - 20px);
 	}
 
-	@media (min-width: $breakpoint-xsmall-max) {
+	@media (min-width: $breakpoint-small) {
 		padding-top: 30px;
 
 		h1 {
