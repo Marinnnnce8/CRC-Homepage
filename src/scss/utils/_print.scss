@@ -6,7 +6,50 @@
 	.uk-breadcrumb,
 	.uk-pagination,
 	.uk-modal,
-	.nb-form {
+	.nb-form,
+	.banner-bottom,
+	img,
+	.start svg,
+	.testimonials svg,
+	.values,
+	.start {
 		display: none !important;
 	}
+
+	.banner {
+		.banner-title {
+			height: auto;
+
+			h1 {
+				width: 100%;
+
+				span {
+					opacity: 1;
+
+					&:last-child {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+
+	.context .number {
+		font-size: 200px;
+	}
+
+	.is-inview,
+	.context .number,
+	.context-text {
+		transform: none !important;
+	}
+
+	.context .number,
+	.context-text {
+		opacity: 1;
+	}
+
+    .testimonials .uk-slider-items li {
+        opacity: 1;
+    }
 }

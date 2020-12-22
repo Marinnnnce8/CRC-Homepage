@@ -8,9 +8,9 @@
 var main = {
 
 	init: function() {
-
+		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		var isDesktop = window.matchMedia("(min-width: 1200px)").matches;
-		if(isDesktop) {
+		if(isDesktop && !isIE11) {
 			main.locomotiveInit();
 		}
 
@@ -189,62 +189,55 @@ var main = {
 	locomotiveInit: function() {
 		document.documentElement.classList.add('is-loaded');
 		document.documentElement.classList.remove('is-loading');
-
-		setTimeout(() => {
+		setTimeout(function () {
 			document.documentElement.classList.add('is-ready');
-		},300)
+		}, 300);
 
-		let options = {
+		var options = {
 			el: document.querySelector('#js-scroll'),
 			smooth: true,
 			getSpeed: true,
 			getDirection: true
-		}
+		};
 
-		if(document.querySelector('#js-scroll').getAttribute('data-horizontal') == 'true') {
+		if (document.querySelector('#js-scroll').getAttribute('data-horizontal') == 'true') {
 			options.direction = 'horizontal';
 			options.gestureDirection = 'both';
 			options = {
 				smooth: true,
 				direction: 'horizontal',
 				horizontalGesture: true
-			}
-			options.reloadOnContextChange = true
+			};
+			options.reloadOnContextChange = true;
 		}
 
-		setTimeout(() => {
-			const scroll = new LocomotiveScroll(options);
-
-			let dynamicBackgrounds = [];
-
-			scroll.on('scroll', (instance) => {
-				const progress = 360 * instance.scroll.y / instance.limit;
-
-				dynamicBackgrounds.forEach(obj => {
-					obj.el.style.backgroundColor = `hsl(${progress}, 11%, 81%)`;
+		setTimeout(function () {
+			var scroll = new LocomotiveScroll(options);
+			var dynamicBackgrounds = [];
+			scroll.on('scroll', function (instance) {
+				var progress = 360 * instance.scroll.y / instance.limit;
+				dynamicBackgrounds.forEach(function (obj) {
+				obj.el.style.backgroundColor = "hsl(".concat(progress, ", 11%, 81%)");
 				});
-
-				document.documentElement.setAttribute('data-direction', instance.direction)
+				document.documentElement.setAttribute('data-direction', instance.direction);
 			});
-
-			scroll.on('call', (value, way, obj) => {
+			scroll.on('call', function (value, way, obj) {
 				if (value === 'dynamicBackground') {
-					if(way === 'enter') {
+					if (way === 'enter') {
 						dynamicBackgrounds.push({
-							id: obj.id,
-							el: obj.el
+						id: obj.id,
+						el: obj.el
 						});
 					} else {
 						for (var i = 0; i < dynamicBackgrounds.length; i++) {
-							if(obj.id === dynamicBackgrounds[i].id) {
-								dynamicBackgrounds.splice(i,1);
+							if (obj.id === dynamicBackgrounds[i].id) {
+								dynamicBackgrounds.splice(i, 1);
 							}
 						}
 					}
 				}
 			});
-
-		}, 1000)
+		}, 1000);
 	}
 };
 
