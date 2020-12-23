@@ -51,12 +51,8 @@
 
 			h1 {
 				span {
+					animation: fadeIn 1s linear forwards;
 					opacity: 0;
-					transition: .5s linear;
-				}
-
-				&.is-inview span {
-					opacity: 1;
 				}
 			}
 		}

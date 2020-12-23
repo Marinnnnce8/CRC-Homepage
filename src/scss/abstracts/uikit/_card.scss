@@ -1,6 +1,5 @@
 // .uk-card
 @mixin hook-card {
-    // width: 100%;
     max-width: 280px;
 
     @media (min-width: $breakpoint-xsmall-max) {
