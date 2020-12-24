@@ -41,7 +41,29 @@ screen and (-ms-high-contrast: none) {
         opacity: 1;
     }
 
+    .start {
+        @media (max-width: $breakpoint-large) {
+            display: block;
+        }
+    }
+
     .values {
-        padding-left: 50px;
+
+        @media (min-width: $breakpoint-medium-max) {
+            padding-left: 50px;
+            padding-right: 50px;
+
+            >div {
+
+                >.uk-flex {
+                    flex-wrap: wrap;
+                    min-width: 0;
+                }
+            }
+
+            .uk-grid {
+                flex-wrap: wrap;
+            }
+        }
     }
 }
