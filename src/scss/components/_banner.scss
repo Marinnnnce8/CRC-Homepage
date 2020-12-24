@@ -64,7 +64,7 @@
 		}
 
 		&-bottom h1 {
-			min-width: 120vw;
+			min-width: 125vw;
 		}
 
 		.uk-overlay {
@@ -72,11 +72,17 @@
 		}
 	}
 
+	@media (max-width: $breakpoint-xlarge) {
+		h1 {
+			font-size: 80px;
+		}
+	}
+
 	@media (max-width: $breakpoint-large) {
 		overflow-x: hidden;
 
 		h1 {
-			font-size: 80px;
+			font-size: 60px;
 		}
 	}
 
