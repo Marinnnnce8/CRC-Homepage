@@ -104,28 +104,29 @@ html.has-scroll-dragging {
 	}
 }
 
-.c-fixed {
-	height: 100%;
-	background-size: cover;
-	background-position: 50%;
-	opacity: .75;
-	mix-blend-mode: multiply;
-}
+// .c-fixed {
+// 	height: 100%;
+// 	background-size: cover;
+// 	background-position: 50%;
+// 	opacity: .75;
+// 	mix-blend-mode: multiply;
+// }
 
-.c-fixed,
+// .c-fixed,
 .c-fixed_target {
 	position: absolute;
 	top: 0;
 	right: 0;
-	left: 0;
+    left: 0;
+    bottom: 64vh;
 }
 
-.c-fixed_target {
-	bottom: -100vh;
-}
+// .c-fixed_target {
+// 	bottom: 64vh;
+// }
 
-@media (min-width: 1000px) {
-	.c-fixed_wrapper {
-		height: 100vh;
-	}
-}
+// @media (min-width: 1000px) {
+// 	.c-fixed_wrapper {
+// 		height: 100vh;
+// 	}
+// }

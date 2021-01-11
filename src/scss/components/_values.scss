@@ -60,7 +60,8 @@
     }
 
     @media (min-width: $breakpoint-large) {
-        padding-bottom: 150px;
+        margin-top: -60vh;
+        padding-bottom: 200px;
 
         >div>.uk-flex-middle {
             min-width: 1700px;

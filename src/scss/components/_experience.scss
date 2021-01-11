@@ -1,6 +1,10 @@
 .experience {
     padding: 120px 0 60px;
 
+    .experience-image-ie {
+        display: none;
+    }
+
     @media (min-width: $breakpoint-xsmall-max) {
         padding: 165px 0 67px;
     }
@@ -35,7 +39,7 @@
         }
     }
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-xsmall-max) {
         h2 {
             font-size: 44px;
         }

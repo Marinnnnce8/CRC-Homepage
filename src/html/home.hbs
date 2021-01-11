@@ -140,19 +140,24 @@
 		<div class="uk-visible@l">
 			{{#> ukGrid class="uk-grid-xlarge uk-flex uk-child-width-1-2"}}
 				{{#*inline "cells"}}
-					<div data-scroll data-scroll-speed="5" class="experience-image">
-						<div class="c-fixed_wrapper uk-position-relative uk-overflow-hidden uk-background-default" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-							<div class="c-fixed_target" id="experienceImgTarget"></div>
-							<div class="c-fixed" data-uk-img data-scroll data-scroll-sticky data-scroll-target="#experienceImgTarget" style="background-image: url('./img/home-6.jpg');"></div>
-						</div>
+					<div data-scroll data-scroll-speed="3">
+                        <div class="experience-image uk-position-relative">
+                            <img class="uk-display-block uk-width-1-1" src="./img/home-6-1.jpg" loading="lazy" width="1218" height="1238" alt="image">
+                            <img class="uk-display-block uk-width-1-1" src="./img/home-6-2.jpg" loading="lazy" width="1218" height="1238" alt="image">
+                            <img class="uk-display-block uk-width-1-1" src="./img/home-6-3.jpg" loading="lazy" width="1218" height="1238" alt="image">
+                            <div class="c-fixed_target" id="experienceImgTarget"></div>
+                        </div>
+                        <div class="experience-image-ie uk-background-cover" data-uk-img style="background-image: url('./img/home-6-1.jpg');"></div>
 					</div>
-					<div class="uk-position-relative" data-scroll data-scroll-speed="1" data-scroll-sticky data-scroll-target="#experienceTarget">
-						<div class="uk-width-4-5" data-scroll data-scroll-offset="200">
-							<h2 class="uk-text-large">Your experience working with CRC</h2>
-							<p>Our focus is on building a relationship with you and your business.</p>
-							<p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
-							<p>We’re constantly evolving the platforms we use to ensure we give you the best experience.</p>
-						</div>
+					<div data-scroll data-scroll-speed="1">
+                        <div data-scroll data-scroll-sticky data-scroll-offset="-200" data-scroll-target="#experienceImgTarget">
+                            <div class="uk-width-4-5">
+                                <h2 class="uk-text-large">Your experience working with CRC</h2>
+                                <p>Our focus is on building a relationship with you and your business.</p>
+                                <p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
+                                <p>We’re constantly evolving the platforms we use to ensure we give you the best experience.</p>
+                            </div>
+                        </div>
 					</div>
 				{{/inline}}
 			{{/ukGrid}}

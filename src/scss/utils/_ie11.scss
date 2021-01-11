@@ -65,5 +65,21 @@ screen and (-ms-high-contrast: none) {
                 flex-wrap: wrap;
             }
         }
+
+        @media (min-width: $breakpoint-large) {
+            margin-top: 0;
+            padding-bottom: 150px;
+        }
+    }
+
+    .experience {
+        .experience-image {
+            display: none;
+        }
+
+        .experience-image-ie {
+            display: block;
+            height: 800px;
+        }
     }
 }
