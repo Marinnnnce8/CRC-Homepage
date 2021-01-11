@@ -233,29 +233,8 @@ var main = {
 
 		setTimeout(function () {
 			var scroll = new LocomotiveScroll(options);
-			var dynamicBackgrounds = [];
 			scroll.on('scroll', function (instance) {
-				var progress = 360 * instance.scroll.y / instance.limit;
-				dynamicBackgrounds.forEach(function (obj) {
-				obj.el.style.backgroundColor = "hsl(".concat(progress, ", 11%, 81%)");
-				});
 				document.documentElement.setAttribute('data-direction', instance.direction);
-			});
-			scroll.on('call', function (value, way, obj) {
-				if (value === 'dynamicBackground') {
-					if (way === 'enter') {
-						dynamicBackgrounds.push({
-						id: obj.id,
-						el: obj.el
-						});
-					} else {
-						for (var i = 0; i < dynamicBackgrounds.length; i++) {
-							if (obj.id === dynamicBackgrounds[i].id) {
-								dynamicBackgrounds.splice(i, 1);
-							}
-						}
-					}
-				}
 			});
 		}, 1000);
 	}

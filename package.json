@@ -52,7 +52,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "imagemin-pngquant": "^9.0.1",
     "lodash": "^4.17.20",
-    "uikit": "^3.5.9"
+    "uikit": "^3.6.10"
   },
   "sasslintConfig": ".sass-lint.yml"
 }
