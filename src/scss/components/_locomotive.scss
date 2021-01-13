@@ -104,15 +104,6 @@ html.has-scroll-dragging {
 	}
 }
 
-// .c-fixed {
-// 	height: 100%;
-// 	background-size: cover;
-// 	background-position: 50%;
-// 	opacity: .75;
-// 	mix-blend-mode: multiply;
-// }
-
-// .c-fixed,
 .c-fixed_target {
 	position: absolute;
 	top: 0;
@@ -120,13 +111,3 @@ html.has-scroll-dragging {
     left: 0;
     bottom: 64vh;
 }
-
-// .c-fixed_target {
-// 	bottom: 64vh;
-// }
-
-// @media (min-width: 1000px) {
-// 	.c-fixed_wrapper {
-// 		height: 100vh;
-// 	}
-// }
