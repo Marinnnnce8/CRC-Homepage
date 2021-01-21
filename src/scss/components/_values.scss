@@ -21,6 +21,7 @@
         width: 80px;
         height: 80px;
         transition: $transition;
+
         @include hover {
             background-color: $warning;
         }
@@ -35,6 +36,23 @@
     }
 
     @media (min-width: $breakpoint-xsmall-max) {
+
+        // .uk-grid-column-small,
+        // .uk-grid-small {
+        //     margin-left: -7px;
+
+        //     >* {
+        //         padding-left: 7px;
+        //     }
+        // }
+
+        // *+.uk-grid-margin-small,
+        // .uk-grid+.uk-grid-row-small,
+        // .uk-grid+.uk-grid-small,
+        // .uk-grid-row-small>.uk-grid-margin,
+        // .uk-grid-small>.uk-grid-margin {
+        //     margin-top: 7px;
+        // }
 
         .uk-grid-column-small,
         .uk-grid-small {
@@ -60,11 +78,29 @@
     }
 
     @media (min-width: $breakpoint-large) {
-        margin-top: -60vh;
+        // margin-top: -60vh;
+        margin-top: -75vh;
         padding-bottom: 200px;
 
+        // >div>.uk-flex-middle {
+        //     min-width: 1700px;
+        // }
         >div>.uk-flex-middle {
-            min-width: 1700px;
+            max-width: 95%;
+            width: 100%;
+        }
+
+        .value {
+            min-width: 145px;
+            min-height: 145px;
+            width: calc(100vw / 10);
+            height: calc(100vw / 10);
+        }
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        >div>.uk-flex-middle {
+            max-width: 95%;
         }
     }
 

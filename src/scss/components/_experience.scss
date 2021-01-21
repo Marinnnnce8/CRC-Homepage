@@ -10,11 +10,16 @@
     }
 
     @media (min-width: $breakpoint-large) {
-        padding: 225px 0 150px;
+        // padding: 225px 0 150px;
+        padding: 50px 0 150px;
 
         h2 {
             margin-bottom: 45px;
             font-size: 2rem;
+        }
+
+        .experience-image {
+            top: -200px;
         }
     }
 

@@ -8,10 +8,13 @@ $testimonialsDelay: 4;
     }
 
     &-icon {
-        fill: rgba($global-color, .1);
         position: absolute;
         top: 257px;
         transform: translateY(-50%);
+
+        svg {
+            fill: rgba($global-color, .1);
+        }
     }
 
     .uk-card {
@@ -63,10 +66,10 @@ $testimonialsDelay: 4;
         }
 
         .uk-grid {
-            margin-left: -5px;
+            margin-left: -30px;
 
             >* {
-                padding-left: 5px;
+                padding-left: 30px;
             }
         }
 
@@ -84,9 +87,25 @@ $testimonialsDelay: 4;
         }
     }
 
+    @media (min-width: $breakpoint-xlarge) {
+        .uk-grid {
+            margin-left: -70px;
+
+            >* {
+                padding-left: 70px;
+            }
+        }
+    }
+
     @media (max-width: $breakpoint-large) {
         p {
             font-size: 24px;
+        }
+    }
+
+    @media (max-width: $breakpoint-xlarge) and (min-width: $breakpoint-large) {
+        .uk-card-body {
+            padding: 20px;
         }
     }
 

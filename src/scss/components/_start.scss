@@ -1,5 +1,5 @@
 $transitionDelay: 4;
-$svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-operator
+$svgTransitionDelay: $transitionDelay+1; // sass-lint:disable-line space-around-operator
 
 .start {
     overflow-x: hidden;
@@ -8,17 +8,50 @@ $svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-o
         max-width: calc(100vw - 20px);
     }
 
-    svg {
+    // svg {
+    //     width: 227px;
+    //     height: 69px;
+    //     margin-bottom: 35px;
+    //     transition: $transition;
+    //     position: relative;
+    // }
+    .arrow-right {
+        display: block;
+        transition: .4s ease-in-out;
         width: 227px;
         height: 69px;
         margin-bottom: 35px;
-        transition: $transition;
         position: relative;
+
+        &::after,
+        &::before {
+            display: block;
+            position: absolute;
+            right: 0;
+            content: '';
+        }
+
+        &::after {
+            left: 0;
+            height: 4px;
+            background-color: $warning;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            width: 40px;
+            height: 40px;
+            border-right: 4px solid $warning;
+            border-bottom: 4px solid $warning;
+            transform: rotate(-45deg) translate(30%, -41%);
+            top: 50%;
+        }
     }
 
     @include hover {
-        svg {
-            transform: translateX(15%);
+        .arrow-right {
+            width: 300px;
         }
     }
 
@@ -27,7 +60,7 @@ $svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-o
             max-width: calc(100vw - 60px);
         }
 
-        svg {
+        .arrow-right {
             margin-bottom: 85px;
         }
     }
@@ -52,7 +85,7 @@ $svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-o
                 padding: 208px 0 277px 100px;
             }
 
-            svg {
+            .arrow-right {
                 bottom: 120px;
             }
 
@@ -92,7 +125,7 @@ $svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-o
             .uk-background-primary {
                 padding: 157px 0 256px 207px;
 
-                svg {
+                .arrow-right {
                     bottom: 177px;
                 }
             }
@@ -118,23 +151,23 @@ $svgTransitionDelay: $transitionDelay+1;// sass-lint:disable-line space-around-o
         }
 
         li,
-        svg,
+        .arrow-right,
         img {
             transition: .5s ease;
         }
 
-        svg {
+        .arrow-right {
             position: absolute;
             left: 0;
             transform: translateY(100%);
             margin-bottom: 0;
         }
 
-        @include hover {
-            svg {
-                transform: translate(15%, 100%);
-            }
-        }
+        // @include hover {
+        //     .arrow-right {
+        //         transform: translate(15%, 100%);
+        //     }
+        // }
     }
 
     @media (min-width: $breakpoint-large-max) {

@@ -69,6 +69,16 @@ screen and (-ms-high-contrast: none) {
         @media (min-width: $breakpoint-large) {
             margin-top: 0;
             padding-bottom: 150px;
+
+            >div>.uk-flex-middle>div {
+                margin-top: 15px;
+            }
+        }
+
+        @media (min-width: $breakpoint-xlarge) {
+            >div>.uk-flex-middle {
+                max-width: 100%;
+            }
         }
     }
 
@@ -80,6 +90,10 @@ screen and (-ms-high-contrast: none) {
         .experience-image-ie {
             display: block;
             height: 800px;
+        }
+
+        @media (min-width: $breakpoint-large) {
+            padding: 225px 0 75px;
         }
     }
 }

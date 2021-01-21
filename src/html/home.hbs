@@ -84,7 +84,8 @@
 					<li><h2>get</h2></li>
 					<li><h2>started?</h2></li>
 				</ul>
-				{{>renderIcon name="arrow-right" viewBox="228 69"}}
+				{{!-- {{>renderIcon name="arrow-right" viewBox="228 69"}} --}}
+                <span class="arrow-right" role="presentation"></span>
 			</div>
 		</div>
 	</div>
@@ -101,12 +102,15 @@
 				<li class="uk-position-relative"><h2>get</h2></li>
 				<li class="uk-position-relative"><h2>started?</h2></li>
 			</ul>
-			{{>renderIcon name="arrow-right" viewBox="228 69"}}
+			{{!-- {{>renderIcon name="arrow-right" viewBox="228 69"}} --}}
+            <span class="arrow-right" role="presentation"></span>
 		</div>
 	</div>
 
 	<div class="uk-position-relative testimonials uk-background-secondary">
-		{{> renderIcon name="testimonials" class="testimonials-icon" viewBox="1601 166"}}
+        <span class="testimonials-icon uk-width-1-1" data-scroll data-scroll-speed="3">
+		{{> renderIcon name="testimonials" viewBox="1601 166"}}
+        </span>
 		{{#> ukContainer size=ukContainer}}
 			{{#*inline "out"}}
 			<h2 class="testimonials-title">See who<br> we’ve helped</h2>
@@ -150,11 +154,11 @@
                         <div class="experience-image-ie uk-background-cover" data-uk-img style="background-image: url('./img/home-6-1.jpg');"></div>
 					</div>
 					<div data-scroll data-scroll-speed="1">
-                        <div data-scroll data-scroll-sticky data-scroll-offset="-200" data-scroll-target="#experienceImgTarget">
+                        <div data-scroll data-scroll-sticky data-scroll-offset="-50" data-scroll-target="#experienceImgTarget">
                             <div class="uk-width-4-5">
                                 <h2 class="uk-text-large">Your experience working with CRC</h2>
                                 <p>Our focus is on building a relationship with you and your business.</p>
-                                <p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation’s workflows.</p>
+                                <p>To do this, we use a range of tools and platforms that create clear communication channels and build more efficient processes into your organisation's workflows.</p>
                                 <p>We’re constantly evolving the platforms we use to ensure we give you the best experience.</p>
                             </div>
                         </div>
@@ -215,10 +219,8 @@
 	</div>
 
 	<div class="values uk-visible@l" id="valuesDirection">
-		<div data-scroll data-scroll-direction="horizontal" data-scroll-target="#valuesDirection" data-scroll-speed="-40">
-			<div class="uk-flex uk-flex-middle">
-				{{#> ukGrid class="uk-grid-small uk-flex"}}
-					{{#*inline "cells"}}
+		<div data-scroll data-scroll-direction="horizontal" data-scroll-target="#valuesDirection" data-scroll-speed="-20">
+			<div class="uk-flex uk-flex-middle uk-flex-between">
 
 					{{#each page.values}}
 						{{#with this}}
@@ -228,8 +230,6 @@
 						{{/with}}
 					{{/each}}
 
-					{{/inline}}
-				{{/ukGrid}}
 			</div>
 		</div>
 	</div>	
@@ -245,7 +245,8 @@
 				<li><h2>get</h2></li>
 				<li><h2>started?</h2></li>
 			</ul>
-			{{>renderIcon name="arrow-right" viewBox="228 69"}}
+			{{!-- {{>renderIcon name="arrow-right" viewBox="228 69"}} --}}
+            <span class="arrow-right" role="presentation"></span>
 		</div>
 	</div>
 
